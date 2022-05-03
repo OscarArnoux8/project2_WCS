@@ -19,8 +19,9 @@ from skimage import io
 import urllib
 import cv2
 
-# Need to get csv file for images
-##tmdb = pd.read_csv('movies_additional_data.csv') # Additional dataset for pictures etc (this one for instance)
+imdb = pd.read_csv('imdb.csv')
+tmdb = pd.read_csv('movies_additional_data.csv') # Additional dataset for pictures etc
+
 X = imdb[['isAdult', 'startYear', 'runtimeMinutes',
        'averageRating', 'numVotes', 'Action', 'Adventure',
        'Animation', 'Biography', 'Comedy', 'Crime', 'Documentary', 'Drama',
