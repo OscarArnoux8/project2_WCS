@@ -18,6 +18,9 @@ from google.colab.patches import cv2_imshow
 from skimage import io
 import urllib
 import cv2
+import streamlit as st
+
+st.title('Recommandation de films')
 
 imdb = pd.read_csv('imdb.csv')
 tmdb = pd.read_csv('movies_additional_data.csv') # Additional dataset for pictures etc
