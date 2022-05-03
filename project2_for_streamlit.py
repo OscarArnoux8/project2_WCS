@@ -20,6 +20,11 @@ import urllib
 import cv2
 import streamlit as st
 
+st.write('''
+#Vous avez aimé un film ?
+Nous trouverons votre bonheur
+''')
+
 st.title('Recommandation de films')
 
 imdb = pd.read_csv('imdb.csv')
@@ -47,14 +52,14 @@ try:
     predict = distanceKNN.kneighbors(X_scaled[imdb.title.str.lower() == input().lower()]) #Mettre le input en regex
     stop = 0
 except ValueError:
-    print("Le film n'est pas dans la séléction.")
+    st.write("Le film n'est pas dans la séléction.")
     stop = 1
 
 newFilm = pd.DataFrame(columns = imdb.columns) 
 for i in range(6):
     if stop == 1: break
     newFilm = newFilm.append(imdb.iloc[predict[1][0][i],:])
-    if i !=0 : print(np.array(newFilm.title)[i]) # Affiche que le nom des films
+    if i !=0 : st.write(np.array(newFilm.title)[i]) # Affiche que le nom des films
 #newFilm[1:] #Debug
 '''
 image = pd.merge(newFilm,tmdb,how='left',on='tconst')
