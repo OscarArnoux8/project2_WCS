@@ -10,7 +10,7 @@ import streamlit as st
 
 st.set_page_config(layout="wide")
 st.write('''
-#Vous avez aimé un film ?
+Vous avez aimé un film ?
 Nous trouverons votre bonheur
 ''')
 
