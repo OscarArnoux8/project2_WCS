@@ -16,8 +16,6 @@ fig1 = imdb.groupby(imdb.startYear)['numVotes'].mean().plot()
 plt.title('Evolution de la Moyenne des votes dans le temps')
 plt.xlabel('Date')
 plt.ylabel('Votes')
-st.pyplot(ax1)
-
 
 fig2 = sns.lineplot(data=imdb,x='runtimeMinutes',y='averageRating')
 plt.title('Notes en fonction de la durée des films')
