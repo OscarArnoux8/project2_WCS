@@ -12,11 +12,11 @@ imdb = pd.read_csv('./imdb.csv')
 st.title('Visualisations et indicateurs')
 st.write('Le résultat de nos analyses sur l\'industrie du film')
 
-st.linechart(imdb.groupby(imdb.startYear)['numVotes'].mean())
+'''st.linechart(imdb.groupby(imdb.startYear)['numVotes'].mean())
 plt.title('Evolution de la Moyenne des votes dans le temps')
 plt.xlabel('Date')
 plt.ylabel('Votes')
-st.pyplot(ax1)
+st.pyplot(ax1)'''
 
 
 st.linechart(data=imdb,x='runtimeMinutes',y='averageRating')
