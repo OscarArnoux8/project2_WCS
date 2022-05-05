@@ -60,8 +60,13 @@ plt.title('Films par genre')
 st.pyplot(fig5)
 
 fig6,ax6 = plt.subplots()
-ax6 = people.category.value_counts(normalize=True).plot(kind='bar') # Not good enough, we must correct it to get appropriate legend and labels
+ax6 = (people.category.value_counts(normalize=True)*100).plot(kind='bar')
 plt.xlabel('Genre')
 plt.ylabel('Pourcentage')
+plt.xticks(ticks = [0,1],labels=['acteurs','actrices'])
+rects = ax6.patches
+labels = [f"label{i}" for i in range(len(rects))]
 st.pyplot(fig6)
+
+
 st.write('WORK IN PROGRESS')
