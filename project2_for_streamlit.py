@@ -1,20 +1,13 @@
 import seaborn as sns
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import plotly.express as px
 sns.set()
 from IPython.display import display
-pd.options.display.max_columns = 35
-from xgboost import XGBClassifier
-import xgboost as xgb
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import NearestNeighbors
 from sklearn.neighbors import kneighbors_graph
-from google.colab import files
 from IPython.display import Image, HTML
-from google.colab.patches import cv2_imshow
 from skimage import io
 import urllib
 import cv2
