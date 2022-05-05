@@ -60,7 +60,7 @@ plt.title('Films par genre')
 st.pyplot(fig5)
 
 fig6,ax6 = plt.subplots()
-ax6 = (round(people.category.value_counts(normalize=True)*100)).plot(kind='bar')
+ax6 = (round(people.category.value_counts(normalize=True)*100),1).plot(kind='bar')
 plt.xlabel('Genre')
 plt.ylabel('Pourcentage')
 plt.xticks(ticks = [0,1],labels=['acteurs','actrices'])
