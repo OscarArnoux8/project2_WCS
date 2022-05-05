@@ -1,7 +1,5 @@
-import seaborn as sns
 import pandas as pd
 import numpy as np
-sns.set()
 from IPython.display import display
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.preprocessing import StandardScaler
