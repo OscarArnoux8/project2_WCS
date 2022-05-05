@@ -24,5 +24,25 @@ ax2 = sns.lineplot(data=imdb,x='runtimeMinutes',y='averageRating')
 plt.title('Notes en fonction de la durée des films')
 plt.xlabel('Durée (minutes)')
 plt.ylabel('Note moyenne')
-
 st.pyplot(fig2)
+
+fig3,ax3 = plt.subplots()
+ax3 = sns.lineplot(data=imdb,x='startYear',y='runtimeMinutes')
+plt.title('Evolution de la durée des films au fil des années')
+plt.xlabel('Date')
+plt.ylabel('Durée (minutes)')
+st.pyplot(fig3)
+
+fig4,ax4 = plt.subplots()
+ax4 = sns.lineplot(data=imdb,x='startYear',y='averageRating')
+plt.title('Evolution de la Moyenne des notes dans le temps')
+plt.xlabel('Date')
+plt.ylabel('Note moyenne')
+st.pyplot(fig4)
+
+mieux_notés = imdb.numVotes.sort_values(ascending=False).head(10)
+titres = np.array([imdb.title.iloc[mieux_notés.index[i]] for i in range(10)])
+votes = np.array([imdb.numVotes.iloc[mieux_notés.index[i]] for i in range(10)])
+plus_notes = pd.DataFrame([{titres[x]:str(votes[x]) for x in range(10)}]).T 
+plus_notes.rename(columns={0:'Nombre de votes'})
+st.write(plus_notes)
