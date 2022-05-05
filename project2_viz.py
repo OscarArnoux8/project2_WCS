@@ -13,7 +13,7 @@ st.title('Visualisations et indicateurs')
 st.write('Le résultat de nos analyses sur l\'industrie du film')
 
 fig,ax = plt.subplots()
-ax = sns.lineplot(imdb.groupby(imdb.startYear)['numVotes'])
+ax = imdb.groupby(imdb.startYear)['numVotes'].plot()
 plt.title('Evolution de la Moyenne des votes dans le temps')
 plt.xlabel('Date')
 plt.ylabel('Votes')
