@@ -8,7 +8,7 @@ import gzip
 sns.set()
 
 imdb = pd.read_csv('./imdb.csv')
-people = pd.read_csv('./people.csv.gz',compression='gzip')
+people = pd.read_csv('./people.csv.gz',compression='gzip',error_bad_lines=False)
 
 st.title('Visualisations et indicateurs')
 st.write('Le résultat de nos analyses sur l\'industrie du film')
