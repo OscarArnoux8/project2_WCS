@@ -68,7 +68,7 @@ ax6.bar_label(ax6.containers[0], label_type='edge')
 st.pyplot(fig6)
 
 top_actors = pd.DataFrame(people.query('category=="actor"').primaryName.value_counts().head())
-st.write(top_actors.rename(columns={'primaryName':'Acteurs'})
+st.write(top_actors.rename(columns={'primaryName':'Acteurs'}))
 
 top_actresses = pd.DataFrame(people.query('category=="actress"').primaryName.value_counts().head())
-st.write(top_actresses.rename(columns={'primaryName':'Actrices'})
+st.write(top_actresses.rename(columns={'primaryName':'Actrices'}))
