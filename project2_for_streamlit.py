@@ -6,9 +6,6 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import NearestNeighbors
 from sklearn.neighbors import kneighbors_graph
 from IPython.display import Image, HTML
-from skimage import io
-import urllib
-import cv2
 import streamlit as st
 
 st.set_page_config(layout="wide")
