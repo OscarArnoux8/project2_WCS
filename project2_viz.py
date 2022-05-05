@@ -44,5 +44,4 @@ mieux_notés = imdb.numVotes.sort_values(ascending=False).head(10)
 titres = np.array([imdb.title.iloc[mieux_notés.index[i]] for i in range(10)])
 votes = np.array([imdb.numVotes.iloc[mieux_notés.index[i]] for i in range(10)])
 plus_notes = pd.DataFrame([{titres[x]:str(votes[x]) for x in range(10)}]).T 
-plus_notes.rename(columns={0:'Nombre de votes'})
-st.write(plus_notes)
+st.write(plus_notes.rename(columns={0:'Nombre de votes'}))
