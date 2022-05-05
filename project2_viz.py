@@ -60,7 +60,7 @@ plt.title('Films par genre')
 st.pyplot(fig5)
 
 fig6,ax6 = plt.subplots()
-ax6 = people.category.value_counts(normalize=True).plot(kind='bar')
+ax6 = people.category.value_counts(normalize=True).plot(kind='bar') # Not good enough, we must correct it to get appropriate legend and labels
 plt.xlabel('Genre')
 plt.ylabel('Pourcentage')
 st.pyplot(fig6)
