@@ -67,4 +67,6 @@ plt.xticks(ticks = [0,1],labels=['acteurs','actrices'])
 ax6.bar_label(ax6.containers[0], label_type='edge')
 st.pyplot(fig6)
 
-st.write('WORK IN PROGRESS')
+st.write('pd.DataFrame(people.query('category=="actor"').primaryName.value_counts().head())')
+
+st.write('pd.DataFrame(people.query('category=="actress"').primaryName.value_counts().head())')
