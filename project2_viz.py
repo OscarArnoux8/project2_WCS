@@ -64,7 +64,16 @@ ax6 = (people.category.value_counts(normalize=True)*100).plot(kind='bar')
 plt.xlabel('Genre')
 plt.ylabel('Pourcentage')
 plt.xticks(ticks = [0,1],labels=['acteurs','actrices'])
-ax6.patches
+rects = ax.patches
+
+# Make some labels.
+labels = [f"label{i}" for i in range(len(rects))]
+
+for rect, label in zip(rects, labels):
+    height = rect.get_height()
+    ax.text(
+        rect.get_x() + rect.get_width() / 2, height + 5, label, ha="center", va="bottom"
+    )
 st.pyplot(fig6)
 
 
