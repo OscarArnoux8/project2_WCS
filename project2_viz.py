@@ -66,6 +66,13 @@ plt.xticks(ticks = [0,1],labels=['acteurs','actrices'])
 ax6.bar_label(ax6.containers[0], label_type='edge')
 st.pyplot(fig6)
 
+fig7,ax7 = plt.subplots()
+ax7 = imdb.groupby((imdb['startYear']//10)*10)['tconst'].count().plot(kind='barh')
+plt.ylabel('Décennie')
+plt.xlabel('Nombre de films')
+plt.title('Sorties par décennie')
+st.pyplot(fig7)
+
 top_actors = pd.DataFrame(people.query('category=="actor"').primaryName.value_counts().head())
 st.table(top_actors.rename(columns={'primaryName':'Acteurs'}))
 
