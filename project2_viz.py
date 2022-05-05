@@ -4,11 +4,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.express as px
 import seaborn as sns
-import gzip
 sns.set()
 
 imdb = pd.read_csv('./imdb.csv')
-people = gzip.open('./people.csv.gz')
+people = pd.read_csv('./people.csv')
 
 st.title('Visualisations et indicateurs')
 st.write('Le résultat de nos analyses sur l\'industrie du film')
@@ -52,3 +51,10 @@ titres_notes = np.array([imdb.title.iloc[mieux_notes.index[i]] for i in range(10
 notes = np.array([imdb.averageRating.iloc[mieux_notes.index[i]] for i in range(10)])
 mieux_notes = pd.DataFrame([{titres_notes[x]:str(notes[x])[0:3] for x in range(10)}]).T 
 st.write(mieux_notes.rename(columns={0:'Note moyenne'}))
+
+fig5,ax5 = plt.subplots()
+ax5= people.genres.str.get_dummies(',').sum().sort_values(ascending=True).tail(15).plot(kind='barh')
+plt.ylabel('Genre')
+plt.xlabel('Nombre de films')
+plt.title('Films par genre')
+st.pyplot(fig5)
