@@ -17,9 +17,11 @@ plt.title('Evolution de la Moyenne des votes dans le temps')
 plt.xlabel('Date')
 plt.ylabel('Votes')
 
+st.pyplot(fig1)
+
 fig2 = sns.lineplot(data=imdb,x='runtimeMinutes',y='averageRating')
 plt.title('Notes en fonction de la durée des films')
 plt.xlabel('Durée (minutes)')
 plt.ylabel('Note moyenne')
 
-st.pyplot(fig1,fig2)
+st.pyplot(fig2)
