@@ -7,7 +7,7 @@ import seaborn as sns
 sns.set()
 
 imdb = pd.read_csv('imdb.csv')
-people = pd.read_csv('people.gz',sep=',')
+people = pd.to_csv('people.gz')
 
 st.title('Visualisations et indicateurs')
 st.write('Le résultat de nos analyses sur l\'industrie du film')
