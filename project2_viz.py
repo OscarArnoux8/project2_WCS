@@ -61,7 +61,6 @@ st.pyplot(fig5)
 
 fig6,ax6 = plt.subplots()
 ax6 = round(people.category.value_counts(normalize=True)*100,1).plot(kind='bar')
-plt.xlabel('Genre')
 plt.ylabel('Pourcentage')
 plt.xticks(ticks = [0,1],labels=['acteurs','actrices'])
 ax6.bar_label(ax6.containers[0], label_type='edge')
