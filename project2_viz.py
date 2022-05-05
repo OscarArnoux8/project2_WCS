@@ -4,6 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.express as px
 import seaborn as sns
+import pickle
 sns.set()
 
 imdb = pd.read_csv('./imdb.csv')
