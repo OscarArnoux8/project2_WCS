@@ -40,13 +40,13 @@ plt.xlabel('Date')
 plt.ylabel('Note moyenne')
 st.pyplot(fig4)
 
-mieux_notés = imdb.numVotes.sort_values(ascending=False).head(10)
+plus_notes = imdb.numVotes.sort_values(ascending=False).head(10)
 titres = np.array([imdb.title.iloc[mieux_notés.index[i]] for i in range(10)])
 votes = np.array([imdb.numVotes.iloc[mieux_notés.index[i]] for i in range(10)])
 plus_notes = pd.DataFrame([{titres[x]:str(votes[x]) for x in range(10)}]).T 
 st.write(plus_notes.rename(columns={0:'Nombre de votes'}))
 
-mieux_notés = imdb.averageRating.sort_values(ascending=False).head(10)
+mieux_notes = imdb.averageRating.sort_values(ascending=False).head(10)
 titres_notes = np.array([imdb.title.iloc[mieux_notés.index[i]] for i in range(10)])
 notes = np.array([imdb.averageRating.iloc[mieux_notés.index[i]] for i in range(10)])
 mieux_notes = pd.DataFrame([{titres_notes[x]:round(notes[x],1) for x in range(10)}]).T 
