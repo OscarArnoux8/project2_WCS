@@ -12,9 +12,16 @@ imdb = pd.read_csv('./imdb.csv')
 st.title('Visualisations et indicateurs')
 st.write('Le résultat de nos analyses sur l\'industrie du film')
 
-fig,ax = plt.subplots()
-ax = imdb.groupby(imdb.startYear)['numVotes'].mean().plot()
+fig,(ax1,ax2) = plt.subplots(1,2)
+
+ax1 = imdb.groupby(imdb.startYear)['numVotes'].mean().plot()
 plt.title('Evolution de la Moyenne des votes dans le temps')
 plt.xlabel('Date')
 plt.ylabel('Votes')
+
+ax2 = sns.lineplot(data=imdb,x='runtimeMinutes',y='averageRating')
+plt.title('Notes en fonction de la durée des films')
+plt.xlabel('Durée (minutes)')
+plt.ylabel('Note moyenne')
+
 st.pyplot(fig)
