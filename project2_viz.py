@@ -6,7 +6,7 @@ import plotly.express as px
 import seaborn as sns
 sns.set()
 
-#imdb = pd.read_csv('./imdb.csv')
+imdb = pd.read_csv('./imdb.csv')
 #people = pd.read_csv('./people.csv.gz')
 
 st.title('Visualisations et indicateurs')
