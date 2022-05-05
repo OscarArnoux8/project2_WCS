@@ -14,7 +14,7 @@ st.write('Le résultat de nos analyses sur l\'industrie du film')
 
 fig1,ax1 = plt.subplots()
 ax1 = imdb.groupby(imdb.startYear)['numVotes'].mean().plot()
-plt.title('Evolution de la Moyenne des votes dans le temps')
+plt.title('Evolution du nombre de votes par film dans le temps')
 plt.xlabel('Date')
 plt.ylabel('Votes')
 st.pyplot(fig1)
