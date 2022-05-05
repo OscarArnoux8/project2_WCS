@@ -64,8 +64,7 @@ ax6 = (people.category.value_counts(normalize=True)*100).plot(kind='bar')
 plt.xlabel('Genre')
 plt.ylabel('Pourcentage')
 plt.xticks(ticks = [0,1],labels=['acteurs','actrices'])
-rects = ax6.patches
-labels = [f"label{i}" for i in range(len(rects))]
+ax6.patches
 st.pyplot(fig6)
 
 
