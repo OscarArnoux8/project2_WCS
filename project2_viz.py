@@ -44,13 +44,13 @@ plus_notes = imdb.numVotes.sort_values(ascending=False).head(10)
 titres = np.array([imdb.title.iloc[plus_notes.index[i]] for i in range(10)])
 votes = np.array([imdb.numVotes.iloc[plus_notes.index[i]] for i in range(10)])
 plus_notes = pd.DataFrame([{titres[x]:str(votes[x]) for x in range(10)}]).T 
-st.write(plus_notes.rename(columns={0:'Nombre de votes'}))
+st.table(plus_notes.rename(columns={0:'Nombre de votes'}))
 
 mieux_notes = imdb.averageRating.sort_values(ascending=False).head(10)
 titres_notes = np.array([imdb.title.iloc[mieux_notes.index[i]] for i in range(10)])
 notes = np.array([imdb.averageRating.iloc[mieux_notes.index[i]] for i in range(10)])
 mieux_notes = pd.DataFrame([{titres_notes[x]:str(notes[x])[0:3] for x in range(10)}]).T 
-st.write(mieux_notes.rename(columns={0:'Note moyenne'}))
+st.table(mieux_notes.rename(columns={0:'Note moyenne'}))
 
 fig5,ax5 = plt.subplots()
 ax5= people.genres.str.get_dummies(',').sum().sort_values(ascending=True).tail(15).plot(kind='barh')
@@ -68,7 +68,7 @@ ax6.bar_label(ax6.containers[0], label_type='edge')
 st.pyplot(fig6)
 
 top_actors = pd.DataFrame(people.query('category=="actor"').primaryName.value_counts().head())
-st.write(top_actors.rename(columns={'primaryName':'Acteurs'}))
+st.table(top_actors.rename(columns={'primaryName':'Acteurs'}))
 
 top_actresses = pd.DataFrame(people.query('category=="actress"').primaryName.value_counts().head())
-st.write(top_actresses.rename(columns={'primaryName':'Actrices'}))
+st.table(top_actresses.rename(columns={'primaryName':'Actrices'}))
