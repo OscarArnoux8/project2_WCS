@@ -14,8 +14,6 @@ st.write('Le résultat de nos analyses sur l\'industrie du film')
 
 fig,(ax1,ax2) = plt.subplots(1,2)
 
-ax1,ax2 = axs
-
 ax1 = imdb.groupby(imdb.startYear)['numVotes'].mean().plot()
 plt.title('Evolution de la Moyenne des votes dans le temps')
 plt.xlabel('Date')
@@ -26,7 +24,4 @@ plt.title('Notes en fonction de la durée des films')
 plt.xlabel('Durée (minutes)')
 plt.ylabel('Note moyenne')
 
-for ax in axs.flat:
-    ax.label_outer()
-    
 st.pyplot(fig)
