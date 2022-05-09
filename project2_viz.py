@@ -31,7 +31,7 @@ st.write('# Le résultat de nos analyses sur l\'industrie du film')
 
 st.subheader('Les outils utilisés')
 
-col1, col2, col3, col4, col5, col6, col7 = st.columns([1 for i in range(7)]) # Adding columns for logos
+col1, col2, col3, col4 = st.columns([1 for i in range(4)]) # Adding columns for logos
 with col1:  # Adding logos one by one
     st.write("IMDb")
     st.image('IMDB_Logo_2016.svg.png', width=60)
@@ -43,14 +43,16 @@ with col3:
     st.image('Matplotlib_icon.png', width=60)
 with col4:
     st.write("Numpy")
-    st.image('numpy_logo.png', width=60)  
-with col5:
+    st.image('numpy_logo.png', width=60) 
+
+col1, col2, col3, col4 = st.columns([1 for i in range(4)])
+with col1:
     st.write("Pandas")
     st.image('Pandas_logo.png', width=60)   
-with col6:
+with col2:
     st.write("Scikit-learn")
     st.image('scikit_logo.png', width=60)    
-with col7:
+with col3:
     st.write("Streamlit")
     st.image('streamlit_logo.png', width=60)
     
