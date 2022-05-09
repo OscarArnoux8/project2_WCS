@@ -26,7 +26,7 @@ with col2:
 with col3:
   st.write("")
 
-st.markdown("<h1 style='text-align: center; color: black;'>JAO analytics : Visualisations et indicateurs</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>JAO analytics : Visualisations et indicateurs</h1>", unsafe_allow_html=True)
 st.write('# Le résultat de nos analyses sur l\'industrie du film')
 
 st.write('# Notre base de donnée :')
