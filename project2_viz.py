@@ -38,7 +38,7 @@ st.table(pd.DataFrame(np.array([['name','11 531 349','6'],['title','8 824 341','
                      columns = ['Nom','Lignes','Colonnes']))
 
 st.write(''' Nous avons décidé de filtrer de la manière suivante :
-   Seuls des films vous seront proposés, tous publics, avec une note sur le site IMDb.
+   Seuls des films vous seront proposés, tout public, avec une note sur le site IMDb.
    Nous avons décidé de n'inclure que les films qui avaient été diffusé en France (Soyez tranquilles, 
    de nombreux films internationaux restent disponibles. 
    
