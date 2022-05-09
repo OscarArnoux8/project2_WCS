@@ -32,10 +32,10 @@ st.write('# Le résultat de nos analyses sur l\'industrie du film')
 st.write('# Notre base de donnée :')
 st.write('Nous avons utilisé la base de donnée IMDb, contenant sept tables avec la structure suivante :')
 
-st.table(pd.DataFrame(np.array([['name','11 531 349','6'],['title','8 824 341','9'],['akas','31 569 218','8'],
-                       ['crew','31 569 218','8'],['episode','6 615 976','4'],['principals','49 736 924','6'],
-                       ['ratings','1 230 633','3']]),
-                     columns = ['Nom','Lignes','Colonnes']))
+st.table(pd.DataFrame(np.array([['name','11 531 349'],['title','8 824 341'],['akas','31 569 218'],
+                       ['crew','31 569 218'],['episode','6 615 976'],['principals','49 736 924'],
+                       ['ratings','1 230 633']]),
+                     columns = ['Nom','Lignes']))
 
 st.write(''' En réalité, la base de donnée contient 605 284 films.
    Nous avons réduit la base de donnée 22560 films, soit 3,7% du total.
