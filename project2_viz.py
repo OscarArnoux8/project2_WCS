@@ -29,6 +29,14 @@ with col3:
 st.markdown("<h1 style='text-align: center; color: black;'>JAO analytics : Visualisations et indicateurs</h1>", unsafe_allow_html=True)
 st.write('# Le résultat de nos analyses sur l\'industrie du film')
 
+st.write('# Notre base de donnée :')
+st.write('Nous avons utilisé la base de donnée IMDb, contenant huit tables avec la structure suivante :')
+
+st.table(pd.DataFrame(np.array([['name','11 531 349','6'],['title','8 824 341','9'],['akas','31 569 218','8'],
+                       ['crew','31 569 218','8'],['episode','6 615 976','4'],['principals','49 736 924','6'],
+                       ['ratings','1 230 633','3']]),
+                     columns = ['Nom','Lignes','Colonnes']))
+
 row1_space1, row_1_1, row1_space2, row_1_2 = st.columns((.1, 1, .1, 1))
 
 with row_1_1, _lock:
