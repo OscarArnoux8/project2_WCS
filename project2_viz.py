@@ -141,3 +141,5 @@ with row_6_2, _lock:
   st.dataframe(top_actors.rename(columns={'primaryName':'Acteurs'}))
 
 st.markdown('Essayez notre [algorithme de recommandation](https://share.streamlit.io/pilouliz/movie_reco/main/app.py)')
+
+st.markdown(<a href="https://share.streamlit.io/pilouliz/movie_reco/main/app.py" target="_self"></a>)
