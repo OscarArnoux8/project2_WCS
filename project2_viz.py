@@ -19,7 +19,7 @@ _lock = RendererAgg.lock
 st.set_page_config(layout="wide")
 
 st.image('bobine.jpg')
-st.image('jao logo.png')
+st.image('jao_logo.png')
 
 st.markdown("<h1 style='text-align: center; color: black;'>Visualisatons et indicateurs</h1>", unsafe_allow_html=True)
 st.write('# Le résultat de nos analyses sur l\'industrie du film')
