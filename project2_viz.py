@@ -76,7 +76,7 @@ plt.title('Sorties par décennie')
 st.pyplot(fig7)
 
 top_actors = pd.DataFrame(people.query('category=="actor"').primaryName.value_counts().head()) # Table of the 5 most prolific actors
-st.table(top_actors.rename(columns={'primaryName':'Acteurs'}))
+st.dataframe(top_actors.rename(columns={'primaryName':'Acteurs'}))
 
 top_actresses = pd.DataFrame(people.query('category=="actress"').primaryName.value_counts().head()) # Table of the 5 most prolific actresses
 st.table(top_actresses.rename(columns={'primaryName':'Actrices'}))
