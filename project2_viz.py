@@ -37,22 +37,22 @@ with col1:  # Adding logos one by one
     st.image('IMDB_Logo_2016.svg.png', width=60)
 with col2:
     st.write("Python")
-    st.image('IMDB_Logo_2016.svg.png', width=60)
+    st.image('python_logo.png', width=60)
 with col3:
     st.write("Matplotlib")
-    st.image('IMDB_Logo_2016.svg.png', width=60)
+    st.image('Matplotlib_icon.png', width=60)
 with col4:
     st.write("Numpy")
-    st.image('IMDB_Logo_2016.svg.png', width=60)  
+    st.image('numpy_logo.png', width=60)  
 with col5:
     st.write("Pandas")
-    st.image('IMDB_Logo_2016.svg.png', width=60)   
+    st.image('Pandas_logo.png', width=60)   
 with col6:
     st.write("Scikit-learn")
-    st.image('IMDB_Logo_2016.svg.png', width=60)    
+    st.image('scikit_logo.png', width=60)    
 with col7:
     st.write("Streamlit")
-    st.image('IMDB_Logo_2016.svg.png', width=60)
+    st.image('streamlit_logo.png', width=60)
     
 st.write('# Notre base de donnée :')
 st.write('Nous avons utilisé la base de donnée IMDb, contenant sept tables avec la structure suivante :')
