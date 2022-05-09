@@ -12,7 +12,7 @@ people = pd.read_csv('./people.csv') # Our table with actors/actresses
 
 matplotlib.use("agg")
 
-_lock = RendererAgg. 
+_lock = RendererAgg.lock
 
 st.title('Visualisations et indicateurs') # The title section
 st.write('Le résultat de nos analyses sur l\'industrie du film')
