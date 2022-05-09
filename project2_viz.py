@@ -140,13 +140,6 @@ with row_6_2, _lock:
   top_actors = pd.DataFrame(people.query('category=="actor"').primaryName.value_counts().head()) # Table of the 5 most prolific actors
   st.dataframe(top_actors.rename(columns={'primaryName':'Acteurs'}))
 
-  
-             <style>
-        div.stButton > button:first-child {
-    background-color: rgb(204, 49, 49);
-}
-</style>
-
 st.write(f'''
     <a target="_self" href="https://share.streamlit.io/pilouliz/movie_reco/main/app.py">
         <button>
