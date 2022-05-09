@@ -42,7 +42,7 @@ with coltab:
 with colpie:
   fig,ax = plt.subplots()
   ax = plt.pie(x=[605284-22560,22560],labels=['Total','Notre sélection'],explode=[0,0.1])
-  plt.legend()
+  plt.legend(['e','s'])
   st.pyplot(fig)
   
 st.write(''' En réalité, la base de donnée contient 605 284 films.
