@@ -139,3 +139,5 @@ with row_6_2, _lock:
   st.subheader('Top 5 des acteurs, par nombre de films')
   top_actors = pd.DataFrame(people.query('category=="actor"').primaryName.value_counts().head()) # Table of the 5 most prolific actors
   st.dataframe(top_actors.rename(columns={'primaryName':'Acteurs'}))
+
+st.markdown('Essayez notre [algorithme de recommandation](https://share.streamlit.io/pilouliz/movie_reco/main/app.py))
