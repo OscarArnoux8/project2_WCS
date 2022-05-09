@@ -40,9 +40,9 @@ with coltab:
                        ['ratings','1 230 633']]),
                      columns = ['Nom','Lignes']))
 with colpie:
-  fig, ax = plt.subplots(figsize=(2,2))
+  st.write('Pourcentage de films extraits de la base')
+  fig, ax = plt.subplots(figsize=(1,1))
   ax = plt.pie(x=[605284-22560,22560],labels=['96,3%','3,7%'],explode=[0,0.1])
-  plt.title('Part de la base extraite vs total')
   st.pyplot(fig)
   
 st.write(''' En réalité, la base de donnée contient 605 284 films.
