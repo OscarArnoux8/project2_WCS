@@ -46,7 +46,7 @@ with colpie:
   st.pyplot(fig)
   
 st.write(''' En réalité, la base de donnée contient 605 284 films.
-   Nous avons réduit la base de donnée 22560 films, soit 3,7% du total.
+   Nous avons réduit la base de donnée à 22560 films, soit 3,7% du total.
    Les filtres sont les suivants :
    Seuls des films vous seront proposés, tout public, avec plus de 1000 votes et une note supérieure à 4/10 sur le site IMDb.
    Nous avons décidé de n'inclure que les films qui ont été diffusé en France.
