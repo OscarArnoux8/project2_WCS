@@ -33,17 +33,17 @@ st.subheader('Les outils utilisés')
 st.write("IMDb")
 col1, mid, col2 = st.columns([1,1,20])
 with col1:
-    st.image('row_2_col_1.jpg', width=60)
-with col2:
-    st.write('A Name')
-
-st.write("Python")
-col1, mid, col2 = st.columns([1,1,20])
-with col1:
     st.image('IMDB_Logo_2016.svg.png', width=60)
 with col2:
     st.write('A Name')
-'''    
+'''
+st.write("Python")
+col1, mid, col2 = st.columns([1,1,20])
+with col1:
+    st.image('', width=60)
+with col2:
+    st.write('A Name')
+   
 st.write("Streamlit")
 col1, mid, col2 = st.columns([1,1,20])
 with col1:
