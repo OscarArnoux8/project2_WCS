@@ -45,7 +45,7 @@ with col4:
     st.write("Numpy")
     st.image('numpy_logo.png', width=90) 
 
-col1, col2, col3 = st.columns([1 for i in range(3)])
+col1, col2, col3, col4 = st.columns([1 for i in range(4)])
 with col1:
     st.write("Pandas")
     st.image('Pandas_logo.png', width=90)   
@@ -56,6 +56,9 @@ with col3:
     st.write("Streamlit")
     st.image('streamlit_logo.png', width=90)
     
+with col3:
+    st.write("Github")
+    st.image('
 st.write('# Notre base de donnée :')
 st.write('Nous avons utilisé la base de donnée IMDb, contenant sept tables avec la structure suivante :')
 
