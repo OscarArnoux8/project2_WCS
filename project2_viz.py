@@ -23,7 +23,7 @@ st.write('Le résultat de nos analyses sur l\'industrie du film')
 
 row1_space1, row_11, row1_space2, row_12 = st.columns((.1, 1, .1, 1))
 
-with row_1, _lock:
+with row_11, _lock:
   fig1,ax1 = plt.subplots() # First graph : lineplot, movies by year (maybe try with sns/px ?)
   ax1 = imdb.groupby(imdb.startYear)['numVotes'].mean().plot()
   plt.title('Evolution du nombre de votes par film dans le temps')
@@ -31,13 +31,13 @@ with row_1, _lock:
   plt.ylabel('Votes')
   st.pyplot(fig1)
 
-with row_1, _lock:
-fig2,ax2 = plt.subplots() # Second graph, averageRating by length of movies
-ax2 = sns.lineplot(data=imdb,x='runtimeMinutes',y='averageRating')
-plt.title('Notes en fonction de la durée des films')
-plt.xlabel('Durée (minutes)')
-plt.ylabel('Note moyenne')
-st.pyplot(fig2)
+with row_12, _lock:
+  fig2,ax2 = plt.subplots() # Second graph, averageRating by length of movies
+  ax2 = sns.lineplot(data=imdb,x='runtimeMinutes',y='averageRating')
+  plt.title('Notes en fonction de la durée des films')
+  plt.xlabel('Durée (minutes)')
+  plt.ylabel('Note moyenne')
+  st.pyplot(fig2)
 
 fig3,ax3 = plt.subplots() # Third graph, variation of the length of movies overtime (decades as x)
 ax3 = sns.lineplot(data=imdb,x='startYear',y='runtimeMinutes')
