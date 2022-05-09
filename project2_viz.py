@@ -32,26 +32,38 @@ with row_1_1, _lock:
   st.pyplot(fig1)
 
 with row_1_2, _lock:
-  fig2,ax2 = plt.subplots() # Second graph, averageRating by length of movies
-  ax2 = sns.lineplot(data=imdb,x='runtimeMinutes',y='averageRating')
+  fig2,ax2 = plt.subplots() # Seventh graph, amount of movies by decade
+  ax2 = imdb.groupby((imdb['startYear']//10)*10)['tconst'].count().plot(kind='barh')
+  plt.ylabel('Décennie')
+  plt.xlabel('Nombre de films')
+  plt.title('Sorties par décennie')
+  st.pyplot(fig2)
+  
+row2_space1, row_2_1, row2_space2, row_2_2,row2_space3, row_2_3 = st.columns((.1, 1, .1, 1, .1, 1))
+
+with row_2_1, _lock:
+  fig3,ax3 = plt.subplots() # Third graph, variation of the length of movies overtime (decades as x)
+  ax3 = sns.lineplot(data=imdb,x='startYear',y='runtimeMinutes')
+  plt.title('Evolution de la durée des films au fil des années')
+  plt.xlabel('Date')
+  plt.ylabel('Durée (minutes)')
+  st.pyplot(fig3)
+
+ with row_2_2, _lock:
+  fig4,ax4 = plt.subplots() # Second graph, averageRating by length of movies
+  ax4 = sns.lineplot(data=imdb,x='runtimeMinutes',y='averageRating')
   plt.title('Notes en fonction de la durée des films')
   plt.xlabel('Durée (minutes)')
   plt.ylabel('Note moyenne')
-  st.pyplot(fig2)
+  st.pyplot(fig4)
 
-fig3,ax3 = plt.subplots() # Third graph, variation of the length of movies overtime (decades as x)
-ax3 = sns.lineplot(data=imdb,x='startYear',y='runtimeMinutes')
-plt.title('Evolution de la durée des films au fil des années')
-plt.xlabel('Date')
-plt.ylabel('Durée (minutes)')
-st.pyplot(fig3)
-
-fig4,ax4 = plt.subplots() # Fourth graph, average rating overtime
-ax4 = sns.lineplot(data=imdb,x='startYear',y='averageRating')
-plt.title('Evolution de la Moyenne des notes dans le temps')
-plt.xlabel('Date')
-plt.ylabel('Note moyenne')
-st.pyplot(fig4)
+ with row_2_3, _lock:
+  fig5,ax5 = plt.subplots() # Fourth graph, average rating overtime
+  ax5 = sns.lineplot(data=imdb,x='startYear',y='averageRating')
+  plt.title('Evolution de la Moyenne des notes dans le temps')
+  plt.xlabel('Date')
+  plt.ylabel('Note moyenne')
+  st.pyplot(fig5)
 
 plus_notes = imdb.numVotes.sort_values(ascending=False).head(10) # Our top 10 movies by number of votes, as a table
 titres = np.array([imdb.title.iloc[plus_notes.index[i]] for i in range(10)])
@@ -65,27 +77,27 @@ notes = np.array([imdb.averageRating.iloc[mieux_notes.index[i]] for i in range(1
 mieux_notes = pd.DataFrame([{titres_notes[x]:str(notes[x])[0:3] for x in range(10)}]).T 
 st.table(mieux_notes.rename(columns={0:'Note moyenne'}))
 
-fig5,ax5 = plt.subplots() # Fifth graph, amount of movies for each genre
-ax5= people.genres.str.get_dummies(',').sum().sort_values(ascending=True).tail(15).plot(kind='barh')
-plt.ylabel('Genre')
-plt.xlabel('Nombre de films')
-plt.title('Films par genre')
-st.pyplot(fig5)
+  fig5,ax5 = plt.subplots() # Fifth graph, amount of movies for each genre
+  ax5= people.genres.str.get_dummies(',').sum().sort_values(ascending=True).tail(15).plot(kind='barh')
+  plt.ylabel('Genre')
+  plt.xlabel('Nombre de films')
+  plt.title('Films par genre')
+  st.pyplot(fig5)
 
-fig6,ax6 = plt.subplots() # Sixth graph, repartition by sex : percentage of actresses and actors
-ax6 = round(people.category.value_counts(normalize=True)*100,1).plot(kind='bar')
-plt.ylabel('Pourcentage')
-plt.xticks(ticks = [0,1],labels=['acteurs','actrices'])
-ax6.bar_label(ax6.containers[0], label_type='edge')
-plt.title('Répartition par sexe')
-st.pyplot(fig6)
+  fig6,ax6 = plt.subplots() # Sixth graph, repartition by sex : percentage of actresses and actors
+  ax6 = round(people.category.value_counts(normalize=True)*100,1).plot(kind='bar')
+  plt.ylabel('Pourcentage')
+  plt.xticks(ticks = [0,1],labels=['acteurs','actrices'])
+  ax6.bar_label(ax6.containers[0], label_type='edge')
+  plt.title('Répartition par sexe')
+  st.pyplot(fig6)
 
-fig7,ax7 = plt.subplots() # Seventh graph, amount of movies by decade
-ax7 = imdb.groupby((imdb['startYear']//10)*10)['tconst'].count().plot(kind='barh')
-plt.ylabel('Décennie')
-plt.xlabel('Nombre de films')
-plt.title('Sorties par décennie')
-st.pyplot(fig7)
+  fig2,ax2 = plt.subplots() # Seventh graph, amount of movies by decade
+  ax7 = imdb.groupby((imdb['startYear']//10)*10)['tconst'].count().plot(kind='barh')
+  plt.ylabel('Décennie')
+  plt.xlabel('Nombre de films')
+  plt.title('Sorties par décennie')
+  st.pyplot(fig7)
 
 top_actors = pd.DataFrame(people.query('category=="actor"').primaryName.value_counts().head()) # Table of the 5 most prolific actors
 st.dataframe(top_actors.rename(columns={'primaryName':'Acteurs'}))
