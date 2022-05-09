@@ -21,7 +21,7 @@ st.set_page_config(layout="wide")
 st.markdown("<h1 style='text-align: center; color: black;'>Visualisatons et indicateurs</h1>", unsafe_allow_html=True)
 st.write('# Le résultat de nos analyses sur l\'industrie du film')
 
-st.image('logo_cam.jpg',use_column_width='always')
+st.image('bobine.png')
 
 row1_space1, row_1_1, row1_space2, row_1_2 = st.columns((.1, 1, .1, 1))
 
