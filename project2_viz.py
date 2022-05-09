@@ -13,7 +13,7 @@ people = pd.read_csv('./people.csv') # Our table with actors/actresses
 st.title('Visualisations et indicateurs') # The title section
 st.write('Le résultat de nos analyses sur l\'industrie du film')
 
-col1, col2 = st.columns(2)
+row1_space1,row1_space2 = st.columns(.1, 1, .1, 1)
 
 fig1,ax1 = plt.subplots() # First graph : lineplot, movies by year (maybe try with sns/px ?)
 ax1 = imdb.groupby(imdb.startYear)['numVotes'].mean().plot()
