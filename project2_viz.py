@@ -31,55 +31,29 @@ st.write('# Le résultat de nos analyses sur l\'industrie du film')
 
 st.subheader('Les outils utilisés')
 
-col1, col2, col3, col4, col5, col6, col7 = st.columns([1 for i in range(7)])
-with col1:
+col1, col2, col3, col4, col5, col6, col7 = st.columns([1 for i in range(7)]) # Adding columns for logos
+with col1:  # Adding logos one by one
     st.write("IMDb")
     st.image('IMDB_Logo_2016.svg.png', width=60)
-
-'''
-st.write("Python")
-col1, mid, col2 = st.columns([1,1,20])
-with col1:
-    st.image('', width=60)
 with col2:
-    st.write('A Name')
-   
-st.write("Streamlit")
-col1, mid, col2 = st.columns([1,1,20])
-with col1:
-    st.image('row_2_col_1.jpg', width=60)
-with col2:
-    st.write('A Name')
+    st.write("Python")
+    st.image('IMDB_Logo_2016.svg.png', width=60)
+with col3:
+    st.write("Matplotlib")
+    st.image('IMDB_Logo_2016.svg.png', width=60)
+with col4:
+    st.write("Numpy")
+    st.image('IMDB_Logo_2016.svg.png', width=60)  
+with col5:
+    st.write("Pandas")
+    st.image('IMDB_Logo_2016.svg.png', width=60)   
+with col6:
+    st.write("Scikit-learn")
+    st.image('IMDB_Logo_2016.svg.png', width=60)    
+with col7:
+    st.write("Streamlit")
+    st.image('IMDB_Logo_2016.svg.png', width=60)
     
-st.write("Scikit-Learn")
-col1, mid, col2 = st.columns([1,1,20])
-with col1:
-    st.image('row_2_col_1.jpg', width=60)
-with col2:
-    st.write('A Name')
-    
-st.write("Matplotlib")
-col1, mid, col2 = st.columns([1,1,20])
-with col1:
-    st.image('row_2_col_1.jpg', width=60)
-with col2:
-    st.write('A Name')
-    
-st.write("Numpy")
-col1, mid, col2 = st.columns([1,1,20])
-with col1:
-    st.image('row_2_col_1.jpg', width=60)
-with col2:
-    st.write('A Name')
-
-st.write("Pandas")
-col1, mid, col2 = st.columns([1,1,20])
-with col1:
-    st.image('row_2_col_1.jpg', width=60)
-with col2:
-    st.write('A Name')
-'''
-
 st.write('# Notre base de donnée :')
 st.write('Nous avons utilisé la base de donnée IMDb, contenant sept tables avec la structure suivante :')
 
