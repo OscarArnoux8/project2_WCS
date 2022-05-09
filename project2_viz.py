@@ -57,7 +57,7 @@ with row_2_2, _lock:
   plt.ylabel('Note moyenne')
   st.pyplot(fig4)
 
- with row_2_3, _lock:
+  with row_2_3, _lock:
   fig5,ax5 = plt.subplots() # Fourth graph, average rating overtime
   ax5 = sns.lineplot(data=imdb,x='startYear',y='averageRating')
   plt.title('Evolution de la Moyenne des notes dans le temps')
