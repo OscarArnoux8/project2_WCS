@@ -127,7 +127,7 @@ with row_6_2, _lock:
 
 st.subheader('Evolution du nombre de votes par film dans le temps')
 fig1,ax1 = plt.subplots() # First graph : lineplot, movies by year (maybe try with sns/px ?)
-ax1 = st.line_chart(imdb.groupby(imdb.startYear)['numVotes'].mean())
+ax1 = imdb.groupby(imdb.startYear)['numVotes'].mean().plot()
 plt.xlabel('Date')
 plt.ylabel('Votes')
-st.pyplot(fig1)
+st.line_chart(fig1)
