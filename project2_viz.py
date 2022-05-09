@@ -143,12 +143,12 @@ with row_6_2, _lock:
 
 st.write(f'''
     <a target="_self" href="https://share.streamlit.io/pilouliz/movie_reco/main/app.py">
-      <style>
-div.stButton > button:first-child {
+        <button>
+                <style>
+        div.stButton > button:first-child {
     background-color: rgb(204, 49, 49);
 }
 </style>
-        <button>
             Nos recommandations
         </button>
     </a>
