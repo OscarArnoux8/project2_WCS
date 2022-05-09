@@ -41,7 +41,7 @@ with coltab:
                      columns = ['Nom','Lignes']))
 with colpie:
   st.write("<h2 style='text-align: center;'>Pourcentage de films extraits de la base</h2>", unsafe_allow_html=True)
-  fig, ax = plt.subplots(figsize=(0.5,0.5))
+  fig, ax = plt.subplots()
   ax = plt.pie(x=[605284-22560,22560],labels=['96,3%','3,7%'],explode=[0,0.1])
   st.pyplot(fig)
   
