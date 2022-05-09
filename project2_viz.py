@@ -8,7 +8,6 @@ from matplotlib.figure import Figure
 import plotly.express as px
 import seaborn as sns
 sns.set_style("whitegrid") # Setting the background grid
-sns.set_palette(flatui) 
 
 imdb = pd.read_csv('./imdb.csv') # Reading csv, replace by pickle if necessary
 people = pd.read_csv('./people.csv') # Our table with actors/actresses 
