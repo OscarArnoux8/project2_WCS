@@ -40,7 +40,7 @@ with coltab:
                        ['ratings','1 230 633']]),
                      columns = ['Nom','Lignes']))
 with colpie:
-  fig,ax = plt.subplots(figsize=(3,3))
+  fig,ax = plt.subplots(figsize=(2,2))
   ax = plt.pie(x=[605284-22560,22560],labels=['96,3%','3,7%'],explode=[0,0.1])
   plt.legend(['Total','Notre sélection'])
   st.pyplot(fig)
