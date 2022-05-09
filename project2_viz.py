@@ -43,7 +43,7 @@ st.write(''' Nous avons décidé de filtrer de la manière suivante :
    de nombreux films internationaux restent disponibles. 
    
    Nous réfléchissons encore aux filtres plus précis à appliquer, à la fois pour les analyses et pour l'algorithme.
-   '''
+   ''')
          
 row1_space1, row_1_1, row1_space2, row_1_2 = st.columns((.1, 1, .1, 1))
 
