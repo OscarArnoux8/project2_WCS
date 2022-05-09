@@ -37,8 +37,9 @@ st.table(pd.DataFrame(np.array([['name','11 531 349','6'],['title','8 824 341','
                        ['ratings','1 230 633','3']]),
                      columns = ['Nom','Lignes','Colonnes']))
 
-st.write(''' Nous avons réduit la base de donnée à 22560 films.
-   Nous avons décidé de filtrer de la manière suivante :
+st.write(''' En réalité, la base de donnée contient 605 284 films.
+   Nous avons réduit la base de donnée 22560 films, soit 3,7% du total.
+   Les filtres sont les suivants :
    Seuls des films vous seront proposés, tout public, avec plus de 1000 votes et une note supérieure à 4/10 sur le site IMDb.
    Nous avons décidé de n'inclure que les films qui ont été diffusé en France.
    L'algorithme est limité aux films entre 80 et 210 minutes. 
