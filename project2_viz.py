@@ -31,49 +31,49 @@ st.write('# Le résultat de nos analyses sur l\'industrie du film')
 
 st.subheader('Les outils utilisés')
 st.write("IMDb")
-col1, mid, col2 = st.beta_columns([1,1,20])
+col1, mid, col2 = st.columns([1,1,20])
 with col1:
     st.image('row_2_col_1.jpg', width=60)
 with col2:
     st.write('A Name')
 
 st.write("Python")
-col1, mid, col2 = st.beta_columns([1,1,20])
+col1, mid, col2 = st.columns([1,1,20])
 with col1:
     st.image('row_2_col_1.jpg', width=60)
 with col2:
     st.write('A Name')
     
 st.write("Streamlit")
-col1, mid, col2 = st.beta_columns([1,1,20])
+col1, mid, col2 = st.columns([1,1,20])
 with col1:
     st.image('row_2_col_1.jpg', width=60)
 with col2:
     st.write('A Name')
     
 st.write("Scikit-Learn")
-col1, mid, col2 = st.beta_columns([1,1,20])
+col1, mid, col2 = st.columns([1,1,20])
 with col1:
     st.image('row_2_col_1.jpg', width=60)
 with col2:
     st.write('A Name')
     
 st.write("Matplotlib")
-col1, mid, col2 = st.beta_columns([1,1,20])
+col1, mid, col2 = st.columns([1,1,20])
 with col1:
     st.image('row_2_col_1.jpg', width=60)
 with col2:
     st.write('A Name')
     
 st.write("Numpy")
-col1, mid, col2 = st.beta_columns([1,1,20])
+col1, mid, col2 = st.columns([1,1,20])
 with col1:
     st.image('row_2_col_1.jpg', width=60)
 with col2:
     st.write('A Name')
 
 st.write("Pandas")
-col1, mid, col2 = st.beta_columns([1,1,20])
+col1, mid, col2 = st.columns([1,1,20])
 with col1:
     st.image('row_2_col_1.jpg', width=60)
 with col2:
