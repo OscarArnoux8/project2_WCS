@@ -21,7 +21,7 @@ st.set_page_config(layout="wide")
 st.title('Visualisations et indicateurs') # The title section
 st.write('Le résultat de nos analyses sur l\'industrie du film')
 
-row1_space1, row_11, row1_space2, row_12 = st.columns((.1, 1, .1, 1))
+row1_space1, row_1_1, row1_space2, row_1_2 = st.columns((.1, 1, .1, 1))
 
 with row_1_1, _lock:
   fig1,ax1 = plt.subplots() # First graph : lineplot, movies by year (maybe try with sns/px ?)
