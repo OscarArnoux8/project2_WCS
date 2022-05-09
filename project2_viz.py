@@ -2,7 +2,9 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib.backends.backend_agg import RendererAgg
 import matplotlib
+from matplotlib.figure import Figure
 import plotly.express as px
 import seaborn as sns
 sns.set()
@@ -12,8 +14,9 @@ people = pd.read_csv('./people.csv') # Our table with actors/actresses
 # Keep in mind : tables can change. We should be able to always display our graphs no matter the mergers we apply
 
 matplotlib.use("agg")
-
 _lock = RendererAgg.lock
+
+st.set_page_config(layout="wide")
 
 st.title('Visualisations et indicateurs') # The title section
 st.write('Le résultat de nos analyses sur l\'industrie du film')
