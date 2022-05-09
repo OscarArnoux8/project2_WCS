@@ -34,12 +34,12 @@ st.write('Nous avons utilisé la base de donnée IMDb, contenant sept tables ave
 
 coltab, colpie = st.columns([1,1])
 
-with coltab:
+with coltab, _lock:
   st.table(pd.DataFrame(np.array([['name','11 531 349'],['title','8 824 341'],['akas','31 569 218'],
                        ['crew','31 569 218'],['episode','6 615 976'],['principals','49 736 924'],
                        ['ratings','1 230 633']]),
                      columns = ['Nom','Lignes']))
-with colpie:
+with colpie, _lock:
   st.markdown("<h2 style='text-align: center;'>Pourcentage de films extraits de la base</h2>", unsafe_allow_html=True)
   fig, ax = plt.subplots(figsize=(3,3))
   ax = plt.pie(x=[605284-22560,22560],labels=['96,3%','3,7%'],explode=[0,0.1])
