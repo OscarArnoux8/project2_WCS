@@ -27,8 +27,8 @@ with col3:
   st.write("")
 
 st.markdown("<h1 style='text-align: center;'>JAO analytics : Analyses et recommandations</h1>", unsafe_allow_html=True)
-st.write(''' Le résultat de nos analyses sur l\'industrie du film.
-Projet : conseiller et proposer des recommandations de films à un cinéma situé dans le département de la Creuse.''')
+st.write('Le résultat de nos analyses sur l\'industrie du film.')
+st.subheader('Projet : conseiller et proposer des recommandations de films à un cinéma situé dans le département de la Creuse.')
 
 st.subheader('Les outils utilisés')
 
