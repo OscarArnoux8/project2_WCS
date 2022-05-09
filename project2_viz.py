@@ -29,17 +29,68 @@ with col3:
 st.markdown("<h1 style='text-align: center;'>JAO analytics : Analyses et recommandations</h1>", unsafe_allow_html=True)
 st.write('# Le résultat de nos analyses sur l\'industrie du film')
 
+st.subheader('Les outils utilisés')
+st.write("IMDb")
+col1, mid, col2 = st.beta_columns([1,1,20])
+with col1:
+    st.image('row_2_col_1.jpg', width=60)
+with col2:
+    st.write('A Name')
+
+st.write("Python")
+col1, mid, col2 = st.beta_columns([1,1,20])
+with col1:
+    st.image('row_2_col_1.jpg', width=60)
+with col2:
+    st.write('A Name')
+    
+st.write("Streamlit")
+col1, mid, col2 = st.beta_columns([1,1,20])
+with col1:
+    st.image('row_2_col_1.jpg', width=60)
+with col2:
+    st.write('A Name')
+    
+st.write("Scikit-Learn")
+col1, mid, col2 = st.beta_columns([1,1,20])
+with col1:
+    st.image('row_2_col_1.jpg', width=60)
+with col2:
+    st.write('A Name')
+    
+st.write("Matplotlib")
+col1, mid, col2 = st.beta_columns([1,1,20])
+with col1:
+    st.image('row_2_col_1.jpg', width=60)
+with col2:
+    st.write('A Name')
+    
+st.write("Numpy")
+col1, mid, col2 = st.beta_columns([1,1,20])
+with col1:
+    st.image('row_2_col_1.jpg', width=60)
+with col2:
+    st.write('A Name')
+
+st.write("Pandas")
+col1, mid, col2 = st.beta_columns([1,1,20])
+with col1:
+    st.image('row_2_col_1.jpg', width=60)
+with col2:
+    st.write('A Name')
+
+
 st.write('# Notre base de donnée :')
 st.write('Nous avons utilisé la base de donnée IMDb, contenant sept tables avec la structure suivante :')
 
 coltab, colpie = st.columns([1,1])
 
-with coltab, _lock:
+with coltab:
   st.table(pd.DataFrame(np.array([['name','11 531 349'],['title','8 824 341'],['akas','31 569 218'],
                        ['crew','31 569 218'],['episode','6 615 976'],['principals','49 736 924'],
                        ['ratings','1 230 633']]),
                      columns = ['Nom','Lignes']))
-with colpie, _lock:
+with colpie:
   st.markdown("<h2 style='text-align: center;'>Pourcentage de films extraits de la base</h2>", unsafe_allow_html=True)
   fig, ax = plt.subplots(figsize=(3,3))
   ax = plt.pie(x=[605284-22560,22560],labels=['96,3%','3,7%'],explode=[0,0.1])
