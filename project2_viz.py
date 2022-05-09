@@ -18,7 +18,13 @@ _lock = RendererAgg.lock
 
 st.set_page_config(layout="wide")
 
-st.image(['bobine.jpg','jao_logo.png'])
+col1, col2, col3 = st.beta_columns([1,6,1]) # Center our image
+with col1:
+  st.write("")
+with col2:
+  st.image('bobine.jpg')
+with col3:
+  st.write("")
 
 st.markdown("<h1 style='text-align: center; color: black;'>Visualisatons et indicateurs</h1>", unsafe_allow_html=True)
 st.write('# Le résultat de nos analyses sur l\'industrie du film')
