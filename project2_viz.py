@@ -40,7 +40,8 @@ with coltab:
                        ['ratings','1 230 633']]),
                      columns = ['Nom','Lignes']))
 with colpie:
-  st.pyplot(px.pie(values=[605284,22560]))
+  fig = px.pie(values=[605284,22560])
+  st.pyplot(fig)
   
 st.write(''' En réalité, la base de donnée contient 605 284 films.
    Nous avons réduit la base de donnée 22560 films, soit 3,7% du total.
