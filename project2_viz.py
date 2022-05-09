@@ -31,7 +31,7 @@ st.write('# Le résultat de nos analyses sur l\'industrie du film')
 
 st.subheader('Les outils utilisés')
 st.write("IMDb")
-col1, mid, col2 = st.columns([1 for i in range(8)])
+col1, col2, col3, col4, col5, col6, col7 = st.columns([1 for i in range(7)])
 with col1:
     st.image('IMDB_Logo_2016.svg.png', width=60)
 with col2:
