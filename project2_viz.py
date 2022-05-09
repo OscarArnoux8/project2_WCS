@@ -79,4 +79,4 @@ top_actors = pd.DataFrame(people.query('category=="actor"').primaryName.value_co
 st.dataframe(top_actors.rename(columns={'primaryName':'Acteurs'}))
 
 top_actresses = pd.DataFrame(people.query('category=="actress"').primaryName.value_counts().head()) # Table of the 5 most prolific actresses
-st.table(top_actresses.rename(columns={'primaryName':'Actrices'}))
+st.dataframe(top_actresses.rename(columns={'primaryName':'Actrices'}))
