@@ -115,11 +115,11 @@ st.pyplot(fig6)
 row6_space1, row_6_1, row6_space2, row_6_2 = st.columns((.1, 1, .1, 1))
 
 with row_6_1, _lock:
-  st.subheader('Top 5 des actrices, par nombre de films joués')
+  st.subheader('Top 5 des actrices, par nombre de films')
   top_actresses = pd.DataFrame(people.query('category=="actress"').primaryName.value_counts().head()) # Table of the 5 most prolific actresses
   st.dataframe(top_actresses.rename(columns={'primaryName':'Actrices'}))
   
 with row_6_2, _lock:
-  st.subheader('Top 5 des acteurs, par nombre de films joués')
+  st.subheader('Top 5 des acteurs, par nombre de films')
   top_actors = pd.DataFrame(people.query('category=="actor"').primaryName.value_counts().head()) # Table of the 5 most prolific actors
   st.dataframe(top_actors.rename(columns={'primaryName':'Acteurs'}))
