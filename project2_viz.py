@@ -18,7 +18,7 @@ _lock = RendererAgg.lock
 
 st.set_page_config(layout="wide")
 
-st.markdown("<h1 style='text-align: center; color: red;'>Visualisatons et indicateurs</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: black;'>Visualisatons et indicateurs</h1>", unsafe_allow_html=True)
 st.write('# Le résultat de nos analyses sur l\'industrie du film')
 
 row1_space1, row_1_1, row1_space2, row_1_2 = st.columns((.1, 1, .1, 1))
