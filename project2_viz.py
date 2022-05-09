@@ -10,12 +10,16 @@ imdb = pd.read_csv('./imdb.csv') # Reading csv, replace by pickle if necessary
 people = pd.read_csv('./people.csv') # Our table with actors/actresses 
 # Keep in mind : tables can change. We should be able to always display our graphs no matter the mergers we apply
 
+matplotlib.use("agg")
+
+_lock = RendererAgg. 
+
 st.title('Visualisations et indicateurs') # The title section
 st.write('Le résultat de nos analyses sur l\'industrie du film')
 
 row1_space1, row_1, row1_space2, row2 = st.columns((.1, 1, .1, 1))
 
-with row1:
+with row1, _lock:
   fig1,ax1 = plt.subplots() # First graph : lineplot, movies by year (maybe try with sns/px ?)
   ax1 = imdb.groupby(imdb.startYear)['numVotes'].mean().plot()
   plt.title('Evolution du nombre de votes par film dans le temps')
