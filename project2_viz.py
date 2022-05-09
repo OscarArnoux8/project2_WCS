@@ -7,19 +7,19 @@ import matplotlib
 from matplotlib.figure import Figure
 import plotly.express as px
 import seaborn as sns
-sns.set()
+sns.set() # Setting the background grid
 
 imdb = pd.read_csv('./imdb.csv') # Reading csv, replace by pickle if necessary
 people = pd.read_csv('./people.csv') # Our table with actors/actresses 
 # Keep in mind : tables can change. We should be able to always display our graphs no matter the mergers we apply
 
-matplotlib.use("agg")
+matplotlib.use("agg") # This manages backend
 _lock = RendererAgg.lock
 
 st.set_page_config(layout="wide")
 
 st.title('Visualisations et indicateurs') # The title section
-st.write('Le résultat de nos analyses sur l\'industrie du film')
+st.write('# Le résultat de nos analyses sur l\'industrie du film')
 
 row1_space1, row_1_1, row1_space2, row_1_2 = st.columns((.1, 1, .1, 1))
 
