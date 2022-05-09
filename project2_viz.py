@@ -26,7 +26,7 @@ with col2:
 with col3:
   st.write("")
 
-st.markdown("<h1 style='text-align: center;'>JAO analytics : Visualisations et indicateurs</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>JAO analytics : Analyses et recommandations</h1>", unsafe_allow_html=True)
 st.write('# Le résultat de nos analyses sur l\'industrie du film')
 
 st.write('# Notre base de donnée :')
@@ -37,12 +37,12 @@ st.table(pd.DataFrame(np.array([['name','11 531 349','6'],['title','8 824 341','
                        ['ratings','1 230 633','3']]),
                      columns = ['Nom','Lignes','Colonnes']))
 
-st.write(''' Nous avons décidé de filtrer de la manière suivante :
-   Seuls des films vous seront proposés, tout public, avec une note sur le site IMDb.
-   Nous avons décidé de n'inclure que les films qui avaient été diffusé en France (Soyez tranquilles, 
-   de nombreux films internationaux restent disponibles. 
-   
-   Nous réfléchissons encore aux filtres plus précis à appliquer, à la fois pour les analyses et pour l'algorithme.
+st.write(''' Nous avons réduit la base de donnée à 22560 films.
+   Nous avons décidé de filtrer de la manière suivante :
+   Seuls des films vous seront proposés, tout public, avec plus de 1000 votes et une note supérieure à 4/10 sur le site IMDb.
+   Nous avons décidé de n'inclure que les films qui ont été diffusé en France.
+   L'algorithme est limité aux films entre 80 et 210 minutes. 
+   Nous pensons que ce format est plus adapté à votre cinéma.
    ''')
          
 row1_space1, row_1_1, row1_space2, row_1_2 = st.columns((.1, 1, .1, 1))
