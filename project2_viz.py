@@ -43,12 +43,12 @@ with col3:
     st.image('Matplotlib_icon.png', width=90)
 with col4:
     st.write("Numpy")
-    st.image('numpy_logo.png', width=90) 
+    st.image('numpy_big.png', width=90) 
 
 col1, col2, col3, col4 = st.columns([1 for i in range(4)])
 with col1:
     st.write("Pandas")
-    st.image('Pandas_logo.png', width=90)   
+    st.image('Pandas_big.png', width=90)   
 with col2:
     st.write("Scikit-learn")
     st.image('scikit_logo.png', width=90)    
