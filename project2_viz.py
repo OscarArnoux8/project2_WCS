@@ -18,7 +18,7 @@ _lock = RendererAgg.lock
 
 st.set_page_config(layout="wide")
 
-col1, col2, col3 = st.columns([1,6,1]) # Center our image
+col1, col2, col3 = st.columns([1,10,1]) # Center our image
 with col1:
   st.write("")
 with col2:
