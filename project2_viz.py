@@ -16,7 +16,7 @@ people = pd.read_csv('./people.csv') # Our table with actors/actresses
 matplotlib.use("agg") # This manages backend
 _lock = RendererAgg.lock
 
-st.set_page_config(layout="wide")
+st.set_page_config(layout="centered")
 
 col1, col2, col3 = st.columns([1,1,1]) # Center our image
 with col1:
