@@ -26,7 +26,7 @@ with col2:
 with col3:
   st.write("")
 
-st.markdown("<h1 style='text-align: center;'>JAO Data : Analyses et recommandations</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>JAO Data : Analyse et conseil</h1>", unsafe_allow_html=True)
 st.subheader('Projet : conseiller et proposer des recommandations de films à un cinéma situé dans le département de la Creuse.')
 
 st.subheader('Les outils utilisés')
