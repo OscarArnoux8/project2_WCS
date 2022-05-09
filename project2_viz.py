@@ -45,7 +45,7 @@ with col4:
     st.write("Numpy")
     st.image('numpy_logo.png', width=90) 
 
-col1, col2, col3, col4 = st.columns([1 for i in range(4)])
+col1, col2, col3 = st.columns([1 for i in range(3)])
 with col1:
     st.write("Pandas")
     st.image('Pandas_logo.png', width=90)   
