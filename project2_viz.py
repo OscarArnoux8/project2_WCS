@@ -30,12 +30,12 @@ st.markdown("<h1 style='text-align: center;'>JAO analytics : Analyses et recomma
 st.write('# Le résultat de nos analyses sur l\'industrie du film')
 
 st.subheader('Les outils utilisés')
-st.write("IMDb")
+
 col1, col2, col3, col4, col5, col6, col7 = st.columns([1 for i in range(7)])
 with col1:
+    st.write("IMDb")
     st.image('IMDB_Logo_2016.svg.png', width=60)
-with col2:
-    st.write('A Name')
+
 '''
 st.write("Python")
 col1, mid, col2 = st.columns([1,1,20])
