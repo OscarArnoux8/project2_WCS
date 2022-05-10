@@ -41,7 +41,7 @@ st.subheader('Projet : conseiller et proposer des recommandations de films à un
 
 st.subheader('Les outils utilisés')
 
-col1, col2, col3, col4, col5 = st.columns([1 for i in range(4)]) # Adding columns for logos
+col1, col2, col3, col4 = st.columns([1 for i in range(4)]) # Adding columns for logos
 with col1:  # Adding logos one by one
     st.write("IMDb")
     st.image('IMDB_Logo_2016.svg.png', width=90)
@@ -55,7 +55,7 @@ with col4:
     st.write("Numpy")
     st.image('numpy_big.png', width=90) 
     
-col1, col2, col3, col4, col5 = st.columns([1 for i in range(4)])
+col1, col2, col3, col4 = st.columns([1 for i in range(4)])
 with col1:
     st.write("Pandas")
     st.image('pandas_big.png', width=90)   
