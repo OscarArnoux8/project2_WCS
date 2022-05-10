@@ -191,10 +191,3 @@ st.write(f'''
     unsafe_allow_html=True
         )
 
-div.stButton > button:first-child { 
-color: #4F8BF9;
-border-radius: 20%;
-backgroud-color: #00ff00;
-height: 3em;
-width: 3em; 
-}
