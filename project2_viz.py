@@ -185,6 +185,7 @@ with row_6_2, _lock:
 st.write(f'''
     <a target="_self" href="https://share.streamlit.io/pilouliz/movie_reco/main/app.py">
       <style>
+      <button>
 /* CSS */
 .button-9 {
   appearance: button;
@@ -222,10 +223,8 @@ st.write(f'''
 .button-9:focus {
   box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
 }
-        <button>
-            Nos recommandations
         </button>
-      <style> 
+      </style> 
     </a>
     ''',
     unsafe_allow_html=True
