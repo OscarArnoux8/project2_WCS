@@ -117,7 +117,7 @@ with row_1_1, _lock:
   st.subheader('Evolution du nombre de votes par film dans le temps')
   plt.rcParams.update(rc)
   fig1,ax1 = plt.subplots() # First graph : lineplot, movies by year (maybe try with sns/px ?)
-  ax1 = imdb.groupby(imdb.startYear)['numVotes'].mean().plot(color="#0e1117")
+  ax1 = imdb.groupby(imdb.startYear)['numVotes'].mean().plot(color="#f0fff0")
   plt.xlabel('Date')
   plt.ylabel('Votes')
   st.pyplot(fig1)
@@ -126,7 +126,7 @@ with row_1_2, _lock:
   st.subheader('Sorties par décennie')
   plt.rcParams.update(rc)
   fig2,ax2 = plt.subplots() # Seventh graph, amount of movies by decade
-  ax2 = imdb.groupby((imdb['startYear']//10)*10)['tconst'].count().plot(kind='barh',color="#0e1117")
+  ax2 = imdb.groupby((imdb['startYear']//10)*10)['tconst'].count().plot(kind='barh',color="#f0fff0")
   plt.ylabel('Décennie')
   plt.xlabel('Nombre de films')
   st.pyplot(fig2)
