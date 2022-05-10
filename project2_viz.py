@@ -67,7 +67,7 @@ with col3:
     st.image('streamlit_logo.png', width=90)
 with col4:
     st.write("Github")
-    st.image('GitHub-Mark-120px-plus.png',width=90)
+    st.image('GitHub-Mark-Light-120px-plus.png',width=90)
     
 st.write('# Notre base de donnée :')
 st.write('Nous avons utilisé la base de donnée IMDb, contenant sept tables avec la structure suivante :')
