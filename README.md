@@ -8,6 +8,8 @@ Two parts :
 
 Technology used : Python 3.9.7
 
+Link : https://share.streamlit.io/oscararnoux8/projet2_wcs/main/project2_viz.py
+
 Wild Code school
 
 Arnoux Oscar, Reppert Julien, Le Bihan Alexis
