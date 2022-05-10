@@ -115,6 +115,7 @@ row1_space1, row_1_1, row1_space2, row_1_2 = st.columns((.1, 1, .1, 1))
 
 with row_1_1, _lock:
   st.subheader('Evolution du nombre de votes par film dans le temps')
+  plt.rcParams.update(rc)
   fig1,ax1 = plt.subplots() # First graph : lineplot, movies by year (maybe try with sns/px ?)
   ax1 = imdb.groupby(imdb.startYear)['numVotes'].mean().plot(color="#b80606")
   plt.xlabel('Date')
@@ -123,6 +124,7 @@ with row_1_1, _lock:
 
 with row_1_2, _lock:
   st.subheader('Sorties par décennie')
+  plt.rcParams.update(rc)
   fig2,ax2 = plt.subplots() # Seventh graph, amount of movies by decade
   ax2 = imdb.groupby((imdb['startYear']//10)*10)['tconst'].count().plot(kind='barh',color="#b80606")
   plt.ylabel('Décennie')
@@ -133,6 +135,7 @@ row2_space1, row_2_1, row2_space2, row_2_2,row2_space3, row_2_3 = st.columns((.1
 
 with row_2_1, _lock:
   st.subheader('Evolution de la durée des films au fil des années')
+  plt.rcParams.update(rc)
   fig3,ax3 = plt.subplots() # Third graph, variation of the length of movies overtime (decades as x)
   ax3 = sns.lineplot(data=imdb,x='startYear',y='runtimeMinutes',color="#b80606")
   plt.xlabel('Date')
@@ -141,6 +144,7 @@ with row_2_1, _lock:
 
 with row_2_2, _lock:
   st.subheader('Notes en fonction de la durée des films')
+  plt.rcParams.update(rc)
   fig4,ax4 = plt.subplots() # Second graph, averageRating by length of movies
   ax4 = sns.lineplot(data=imdb,x='runtimeMinutes',y='averageRating',color="#b80606")
   plt.xlabel('Durée (minutes)')
@@ -149,6 +153,7 @@ with row_2_2, _lock:
 
 with row_2_3, _lock:
   st.subheader('Evolution de la Moyenne des notes dans le temps')
+  plt.rcParams.update(rc)
   fig5,ax5 = plt.subplots() # Fourth graph, average rating overtime
   ax5 = sns.lineplot(data=imdb,x='startYear',y='averageRating',color="#b80606")
   plt.xlabel('Date')
@@ -177,6 +182,7 @@ row4_space1, row_4_1, row4_space2, row_4_2 = st.columns((.1, 1, .1, 1))
 
 with row_4_1, _lock:
   st.subheader('Nombre de films par genre')
+  plt.rcParams.update(rc)
   fig5,ax5 = plt.subplots() # Fifth graph, amount of movies for each genre
   ax5= people.genres.str.get_dummies(',').sum().sort_values(ascending=True).tail(15).plot(kind='barh',color="#b80606")
   plt.ylabel('Genre')
@@ -187,6 +193,7 @@ with row_4_1, _lock:
 
 '''
 # This is the fifth row, maybe add a graph with evolution of gender repartition ?
+plt.rcParams.update(rc)
 fig6,ax6 = plt.subplots() # Sixth graph, repartition by sex : percentage of actresses and actors
 ax6 = round(people.category.value_counts(normalize=True)*100,1).plot(kind='bar')
 plt.ylabel('Pourcentage')
