@@ -192,17 +192,17 @@ st.pyplot(fig5)
 
 # Add graph with multiple genres
 
-'''
-# This is the fifth row, maybe add a graph with evolution of gender repartition ?
-plt.rcParams.update(rc)
-fig6,ax6 = plt.subplots() # Sixth graph, repartition by sex : percentage of actresses and actors
-ax6 = round(people.category.value_counts(normalize=True)*100,1).plot(kind='bar')
-plt.ylabel('Pourcentage')
-plt.xticks(ticks = [0,1],labels=['acteurs','actrices'])
-ax6.bar_label(ax6.containers[0], label_type='edge')
-plt.title('Répartition par sexe')
-st.pyplot(fig6)
-'''
+if False:
+    # This is the fifth row, maybe add a graph with evolution of gender repartition ?
+    plt.rcParams.update(rc)
+    fig6,ax6 = plt.subplots() # Sixth graph, repartition by sex : percentage of actresses and actors
+    ax6 = round(people.category.value_counts(normalize=True)*100,1).plot(kind='bar')
+    plt.ylabel('Pourcentage')
+    plt.xticks(ticks = [0,1],labels=['acteurs','actrices'])
+    ax6.bar_label(ax6.containers[0], label_type='edge')
+    plt.title('Répartition par sexe')
+    st.pyplot(fig6)
+
 
 row6_space1, row_6_1, row6_space2, row_6_2 = st.columns((.1, 1, .1, 1))
 
