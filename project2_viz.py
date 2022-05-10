@@ -82,7 +82,7 @@ with coltab:
 with colpie:
   st.markdown("<h2 style='text-align: center;'>Pourcentage de films extraits de la base</h2>", unsafe_allow_html=True)
   fig, ax = plt.subplots(figsize=(3,3))
-  ax = plt.pie(x=[605284-27630,27630],labels=['95,4%','4,6%'],explode=[0,0.1],colors=[#b80606,#FFA500])
+  ax = plt.pie(x=[605284-27630,27630],labels=['95,4%','4,6%'],explode=[0,0.1],colors=['#b80606','#FFA500'])
   st.pyplot(fig)
   
 st.write(''' En réalité, la base de donnée contient 605 284 films.
