@@ -79,8 +79,23 @@ with coltab:
                        ['crew','31 569 218'],['episode','6 615 976'],['principals','49 736 924'],
                        ['ratings','1 230 633']]),
                      columns = ['Nom','Lignes']))
-with colpie:
+with colpie: # Our pie chart
   st.markdown("<h2 style='text-align: center;'>Pourcentage de films extraits de la base</h2>", unsafe_allow_html=True)
+  rc = {'figure.figsize':(8,4.5),
+      'axes.facecolor':'#0e1117',
+      'axes.edgecolor': '#0e1117',
+      'axes.labelcolor': 'white',
+      'figure.facecolor': '#0e1117',
+      'patch.edgecolor': '#0e1117',
+      'text.color': 'white',
+      'xtick.color': 'white',
+      'ytick.color': 'white',
+      'grid.color': 'grey',
+      'font.size' : 12,
+      'axes.labelsize': 12,
+      'xtick.labelsize': 12,
+      'ytick.labelsize': 12}
+  plt.rcParams.update(rc)
   fig, ax = plt.subplots(figsize=(3,3))
   ax = plt.pie(x=[605284-27630,27630],labels=['95,4%','4,6%'],explode=[0,0.1],colors=['#b80606','#FFA500'])
   st.pyplot(fig)
