@@ -176,7 +176,7 @@ with row_3_2, _lock:
   mieux_notes = imdb.averageRating.sort_values(ascending=False).head(10) # Our top 10 movies by average rating, as a table
   titres_notes = np.array([imdb.title.iloc[mieux_notes.index[i]] for i in range(10)])
   notes = np.array([imdb.averageRating.iloc[mieux_notes.index[i]] for i in range(10)])
-  mieux_notes = pd.DataFrame([{titres_notes[x]:round(notes[x],2) for x in range(10)}]).T 
+  mieux_notes = pd.DataFrame([{titres_notes[x]:str(notes[x])[0:3] for x in range(10)}]).T 
   st.table(mieux_notes.rename(columns={0:'Note moyenne'}))
 
 #row4_space1, row_4_1, row4_space2, row_4_2 = st.columns((.1, 1, .1, 1))
