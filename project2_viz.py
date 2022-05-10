@@ -56,7 +56,7 @@ with col4:
     st.image('numpy_big.png', width=90) 
 with col5:
     st.write("Seaborn")
-    st.image('seaborn_logo.png')
+    st.image('seaborn_logo.svg')
     
 col1, col2, col3, col4, col5 = st.columns([1 for i in range(5)])
 with col1:
