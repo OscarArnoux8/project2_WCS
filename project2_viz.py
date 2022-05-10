@@ -178,16 +178,16 @@ with row_3_2, _lock:
   mieux_notes = pd.DataFrame([{titres_notes[x]:str(notes[x])[0:3] for x in range(10)}]).T 
   st.table(mieux_notes.rename(columns={0:'Note moyenne'}))
 
-row4_space1, row_4_1, row4_space2, row_4_2 = st.columns((.1, 1, .1, 1))
+#row4_space1, row_4_1, row4_space2, row_4_2 = st.columns((.1, 1, .1, 1))
 
-with row_4_1, _lock:
-  st.subheader('Nombre de films par genre')
-  plt.rcParams.update(rc)
-  fig5,ax5 = plt.subplots() # Fifth graph, amount of movies for each genre
-  ax5= people.genres.str.get_dummies(',').sum().sort_values(ascending=True).tail(15).plot(kind='barh',color="#f0fff0")
-  plt.ylabel('Genre')
-  plt.xlabel('Nombre de films')
-  st.pyplot(fig5)
+#with row_4_1, _lock:
+st.subheader('Nombre de films par genre')
+plt.rcParams.update(rc)
+fig5,ax5 = plt.subplots() # Fifth graph, amount of movies for each genre
+ax5= people.genres.str.get_dummies(',').sum().sort_values(ascending=True).tail(15).plot(kind='barh',color="#f0fff0")
+plt.ylabel('Genre')
+plt.xlabel('Nombre de films')
+st.pyplot(fig5)
 
 # Add graph with multiple genres
 
