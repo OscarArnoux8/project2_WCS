@@ -82,15 +82,15 @@ with coltab:
 with colpie:
   st.markdown("<h2 style='text-align: center;'>Pourcentage de films extraits de la base</h2>", unsafe_allow_html=True)
   fig, ax = plt.subplots(figsize=(3,3))
-  ax = plt.pie(x=[605284-22560,22560],labels=['96,3%','3,7%'],explode=[0,0.1])
+  ax = plt.pie(x=[605284-27630,27630],labels=['95,4%','4,6%'],explode=[0,0.1])
   st.pyplot(fig)
   
 st.write(''' En réalité, la base de donnée contient 605 284 films.
-   Nous avons réduit la base de donnée à 22560 films, soit 3,7% du total.
+   Nous avons réduit la base de donnée à 27 630 films, soit 4,6% du total.
    Les filtres sont les suivants :
-   Seuls des films vous seront proposés, tout public, avec plus de 1000 votes et une note supérieure à 4/10 sur le site IMDb.
+   Seuls des films vous seront proposés, tout public, avec plus de 600 votes (proche de la médiane) et une note supérieure à 4/10 sur le site IMDb.
    Nous avons décidé de n'inclure que les films qui ont été diffusé en France.
-   L'algorithme est limité aux films entre 80 et 210 minutes. 
+   L'algorithme est limité aux films entre 70 et 210 minutes. 
    Nous pensons que ce format est plus adapté à votre cinéma.
    ''')
          
