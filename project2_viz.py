@@ -185,9 +185,6 @@ with row_6_2, _lock:
 st.write(f'''
     <a target="_self" href="https://share.streamlit.io/pilouliz/movie_reco/main/app.py">
       <style>
-      <!-- HTML !-->
-<button class="button-9" role="button">Button 9</button>
-
 /* CSS */
 .button-9 {
   appearance: button;
