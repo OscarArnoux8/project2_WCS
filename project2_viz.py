@@ -137,7 +137,7 @@ with row_2_1, _lock:
   st.subheader('Evolution de la durée des films au fil des années')
   plt.rcParams.update(rc)
   fig3,ax3 = plt.subplots() # Third graph, variation of the length of movies overtime (decades as x)
-  ax3 = sns.lineplot(data=imdb,x='startYear',y='runtimeMinutes',color="#b80606")
+  ax3 = sns.lineplot(data=imdb,x='startYear',y='runtimeMinutes',color="#f0fff0")
   plt.xlabel('Date')
   plt.ylabel('Durée (minutes)')
   st.pyplot(fig3)
@@ -146,7 +146,7 @@ with row_2_2, _lock:
   st.subheader('Notes en fonction de la durée des films')
   plt.rcParams.update(rc)
   fig4,ax4 = plt.subplots() # Second graph, averageRating by length of movies
-  ax4 = sns.lineplot(data=imdb,x='runtimeMinutes',y='averageRating',color="#b80606")
+  ax4 = sns.lineplot(data=imdb,x='runtimeMinutes',y='averageRating',color="#f0fff0")
   plt.xlabel('Durée (minutes)')
   plt.ylabel('Note moyenne')
   st.pyplot(fig4)
@@ -155,7 +155,7 @@ with row_2_3, _lock:
   st.subheader('Evolution de la Moyenne des notes dans le temps')
   plt.rcParams.update(rc)
   fig5,ax5 = plt.subplots() # Fourth graph, average rating overtime
-  ax5 = sns.lineplot(data=imdb,x='startYear',y='averageRating',color="#b80606")
+  ax5 = sns.lineplot(data=imdb,x='startYear',y='averageRating',color="#f0fff0")
   plt.xlabel('Date')
   plt.ylabel('Note moyenne')
   st.pyplot(fig5)
@@ -184,7 +184,7 @@ with row_4_1, _lock:
   st.subheader('Nombre de films par genre')
   plt.rcParams.update(rc)
   fig5,ax5 = plt.subplots() # Fifth graph, amount of movies for each genre
-  ax5= people.genres.str.get_dummies(',').sum().sort_values(ascending=True).tail(15).plot(kind='barh',color="#b80606")
+  ax5= people.genres.str.get_dummies(',').sum().sort_values(ascending=True).tail(15).plot(kind='barh',color="#f0fff0")
   plt.ylabel('Genre')
   plt.xlabel('Nombre de films')
   st.pyplot(fig5)
