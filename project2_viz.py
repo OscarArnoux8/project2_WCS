@@ -192,7 +192,7 @@ st.pyplot(fig5)
 
 # Add graph with multiple genres
 
-if False:
+if False: # Use it to disable the following code. Use '#' to enable it.
     # This is the fifth row, maybe add a graph with evolution of gender repartition ?
     plt.rcParams.update(rc)
     fig6,ax6 = plt.subplots() # Sixth graph, repartition by sex : percentage of actresses and actors
