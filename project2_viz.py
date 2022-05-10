@@ -41,7 +41,7 @@ st.subheader('Projet : conseiller et proposer des recommandations de films à un
 
 st.subheader('Les outils utilisés')
 
-col1, col2, col3, col4, col5 = st.columns([1 for i in range(5)]) # Adding columns for logos
+col1, col2, col3, col4, col5 = st.columns([1 for i in range(4)]) # Adding columns for logos
 with col1:  # Adding logos one by one
     st.write("IMDb")
     st.image('IMDB_Logo_2016.svg.png', width=90)
@@ -54,11 +54,8 @@ with col3:
 with col4:
     st.write("Numpy")
     st.image('numpy_big.png', width=90) 
-with col5:
-    st.write("Seaborn")
-    st.image('seaborn_logo.svg')
     
-col1, col2, col3, col4, col5 = st.columns([1 for i in range(5)])
+col1, col2, col3, col4, col5 = st.columns([1 for i in range(4)])
 with col1:
     st.write("Pandas")
     st.image('pandas_big.png', width=90)   
@@ -71,9 +68,6 @@ with col3:
 with col4:
     st.write("Github")
     st.image('GitHub-Mark-Light-120px-plus.png',width=90)
-with col5:
-    st.write("Jupyter")
-    st.image("jupyter_logo.png")
     
 st.write('# Notre base de donnée :')
 st.write('Nous avons utilisé la base de donnée IMDb, contenant sept tables avec la structure suivante :')
