@@ -99,7 +99,7 @@ row1_space1, row_1_1, row1_space2, row_1_2 = st.columns((.1, 1, .1, 1))
 with row_1_1, _lock:
   st.subheader('Evolution du nombre de votes par film dans le temps')
   fig1,ax1 = plt.subplots() # First graph : lineplot, movies by year (maybe try with sns/px ?)
-  ax1 = imdb.groupby(imdb.startYear)['numVotes'].mean().plot()
+  ax1 = imdb.groupby(imdb.startYear)['numVotes'].mean().plot(color="#b80606")
   plt.xlabel('Date')
   plt.ylabel('Votes')
   st.pyplot(fig1)
@@ -107,7 +107,7 @@ with row_1_1, _lock:
 with row_1_2, _lock:
   st.subheader('Sorties par décennie')
   fig2,ax2 = plt.subplots() # Seventh graph, amount of movies by decade
-  ax2 = imdb.groupby((imdb['startYear']//10)*10)['tconst'].count().plot(kind='barh')
+  ax2 = imdb.groupby((imdb['startYear']//10)*10)['tconst'].count().plot(kind='barh',color="#b80606")
   plt.ylabel('Décennie')
   plt.xlabel('Nombre de films')
   st.pyplot(fig2)
@@ -117,7 +117,7 @@ row2_space1, row_2_1, row2_space2, row_2_2,row2_space3, row_2_3 = st.columns((.1
 with row_2_1, _lock:
   st.subheader('Evolution de la durée des films au fil des années')
   fig3,ax3 = plt.subplots() # Third graph, variation of the length of movies overtime (decades as x)
-  ax3 = sns.lineplot(data=imdb,x='startYear',y='runtimeMinutes')
+  ax3 = sns.lineplot(data=imdb,x='startYear',y='runtimeMinutes',color="#b80606")
   plt.xlabel('Date')
   plt.ylabel('Durée (minutes)')
   st.pyplot(fig3)
@@ -125,7 +125,7 @@ with row_2_1, _lock:
 with row_2_2, _lock:
   st.subheader('Notes en fonction de la durée des films')
   fig4,ax4 = plt.subplots() # Second graph, averageRating by length of movies
-  ax4 = sns.lineplot(data=imdb,x='runtimeMinutes',y='averageRating')
+  ax4 = sns.lineplot(data=imdb,x='runtimeMinutes',y='averageRating',color="#b80606")
   plt.xlabel('Durée (minutes)')
   plt.ylabel('Note moyenne')
   st.pyplot(fig4)
@@ -133,7 +133,7 @@ with row_2_2, _lock:
 with row_2_3, _lock:
   st.subheader('Evolution de la Moyenne des notes dans le temps')
   fig5,ax5 = plt.subplots() # Fourth graph, average rating overtime
-  ax5 = sns.lineplot(data=imdb,x='startYear',y='averageRating')
+  ax5 = sns.lineplot(data=imdb,x='startYear',y='averageRating',color="#b80606")
   plt.xlabel('Date')
   plt.ylabel('Note moyenne')
   st.pyplot(fig5)
