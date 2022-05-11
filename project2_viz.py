@@ -25,7 +25,7 @@ st.button(on_click = st.write(f'''
         </button>
     </a>
     ''',
-    unsafe_allow_html=True)
+    unsafe_allow_html=True))
 
 col1, col2, col3 = st.columns([1,1,1]) # Center our image
 with col1:
