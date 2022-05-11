@@ -26,7 +26,7 @@ button = st.write(f'''
     ''',
     unsafe_allow_html=True
         )
-st.button(key=button,label='Nos recommandations')
+st.button(on_click=button,label='Nos recommandations')
 
 col1, col2, col3 = st.columns([1,1,1]) # Center our image
 with col1:
