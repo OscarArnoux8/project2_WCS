@@ -165,7 +165,7 @@ with row_2_2, _lock:
   plt.ylabel('Note moyenne')
   st.pyplot(fig5)
   st.write('''Les films d\'avant 1965 sont un peu mieux notés que les films plus récents. Il est bon de rappeler que les graphiques 
-           s\'appliquent à notre sélection.'''
+           s\'appliquent à notre sélection.''')
 
 row3_space1, row_3_1, row3_space2, row_3_2 = st.columns((.1, 1, .1, 1))
 
