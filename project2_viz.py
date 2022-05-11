@@ -17,7 +17,7 @@ matplotlib.use("agg") # This manages backend
 _lock = RendererAgg.lock
 
 st.set_page_config(layout="wide")
-col1, col2, col3 = st.columns([1,5,1]) # for button and logo
+col1, col2, col3 = st.columns([1,5,1]) # for button
 with col1:
     st.button('')
     st.markdown(f'''
@@ -28,13 +28,7 @@ with col1:
     </a>
     ''',
     unsafe_allow_html=True)
-with col2:
-    st.write("")
-with col3:
-    st.write('Alexis Le Bihan')
-    st.write('Julien Reppert')
-    st.write('Oscar Arnoux')
-    
+
 
 col1, col2, col3 = st.columns([1,1,1]) # Center our image
 with col1:
