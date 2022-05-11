@@ -206,7 +206,7 @@ plt.rcParams.update({'figure.figsize':(4,2),
       'xtick.labelsize': 9,
       'ytick.labelsize': 9})
 fig5,ax5 = plt.subplots() # Fifth graph, amount of movies for each genre
-ax5= people.genres.str.get_dummies(',').sum().sort_values(ascending=True).tail(10).plot(kind='barh',color="#f0fff0")
+ax5= people.genres.str.get_dummies(',').sum().sort_values(ascending=True).tail(12).plot(kind='barh',color="#f0fff0")
 plt.ylabel('Genre')
 plt.xlabel('Nombre de films')
 st.pyplot(fig5)
