@@ -21,7 +21,7 @@ col1, col2, col3 = st.columns([1,5,1]) # for button
 with col1:
     st.button('')
     st.markdown(f'''
-    <a target="_self" href="https://share.streamlit.io/pilouliz/movie_reco/main/app.py" style="text-decoration: none; color:white">
+    <a target="_self" href="https://share.streamlit.io/oscararnoux8/project2_wcs/main/project2_viz.py" style="text-decoration: none; color:white">
         <button kind="primary" class="css-1q8dd3e edgvbvh9 button" style=text-align:center>
         Nos recommandations
         </button>
