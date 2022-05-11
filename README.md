@@ -14,6 +14,8 @@ Link Algo : https://share.streamlit.io/oscararnoux8/project2_wcs/main/projet2_ap
 
 You can navigate from one site to another by clicking on the top-left button.
 
+(Please do not pay attention to the amount of commits, we did not know how to use Git and Github at the time)
+
 Wild Code school
 
 Arnoux Oscar, Reppert Julien, Le Bihan Alexis
