@@ -31,7 +31,10 @@ with col1:
 with col2:
     st.write("")
 with col3:
-    st.image('logo_wcs.png')
+    st.write('''Alexis Le Bihan \n
+    Julien Repper \n
+    Oscar Arnoux''')
+    
 
 col1, col2, col3 = st.columns([1,1,1]) # Center our image
 with col1:
