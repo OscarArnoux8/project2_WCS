@@ -31,8 +31,8 @@ with col1:
 with col2:
     st.write("")
 with col3:
-    st.write('''Alexis Le Bihan \n
-                Julien Reppert \n
+    st.write('''Alexis Le Bihan
+                Julien Reppert
                 Oscar Arnoux''')
     
 
