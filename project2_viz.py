@@ -28,7 +28,10 @@ with col1:
     </a>
     ''',
     unsafe_allow_html=True)
-
+with col2:
+    st.write('')
+with col3:
+    st.image('jao_data.png')
 
 col1, col2, col3 = st.columns([1,1,1]) # Center our image
 with col1:
