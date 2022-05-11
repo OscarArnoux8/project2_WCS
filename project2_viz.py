@@ -179,7 +179,7 @@ with row_3_1, _lock:
 
 with row_3_2, _lock:
   st.subheader('Les dix films avec la meilleure note moyenne')
-  mieux_notes = imdb[imdb.numVotes>20000].averageRating.sort_values(ascending=False).head(10) # Our top 10 movies by average rating, as a table
+  mieux_notes = imdb[imdb.numVotes>50000].averageRating.sort_values(ascending=False).head(10) # Our top 10 movies by average rating, as a table
   titres_notes = np.array([imdb.title.iloc[mieux_notes.index[i]] for i in range(10)])
   notes = np.array([imdb.averageRating.iloc[mieux_notes.index[i]] for i in range(10)])
   mieux_notes = pd.DataFrame([{titres_notes[x]:str(notes[x])[0:3] for x in range(10)}]).T 
