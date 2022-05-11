@@ -125,16 +125,18 @@ with row_1_1, _lock:
   st.write('Les votes ont d\'abord eu tendance à augmenter, avec un pic lors de la création d\'IMDb en 1990. Ils ont diminué dans les années 2010.')
 
 with row_1_2, _lock:
-  st.subheader('Sorties par décennie')
+  st.subheader('Sorties de films par décennie')
   plt.rcParams.update(rc)
   fig2,ax2 = plt.subplots() # Seventh graph, amount of movies by decade
   ax2 = imdb.groupby((imdb['startYear']//10)*10)['tconst'].count().plot(kind='barh',color="#f0fff0")
   plt.ylabel('Décennie')
   plt.xlabel('Nombre de films')
   st.pyplot(fig2)
+  st.write('On remarque une nette augmentation au fil du temps. La décennie 2020 devrait prendre le pas sur les autres dans le futur.')
   
 row2_space1, row_2_1, row2_space2, row_2_2,row2_space3, row_2_3 = st.columns((.1, 1, .1, 1, .1, 1))
 
+"""
 with row_2_1, _lock:
   st.subheader('Evolution de la durée des films au fil des années')
   plt.rcParams.update(rc)
@@ -143,6 +145,7 @@ with row_2_1, _lock:
   plt.xlabel('Date')
   plt.ylabel('Durée (minutes)')
   st.pyplot(fig3)
+"""
 
 with row_2_2, _lock:
   st.subheader('Notes en fonction de la durée des films')
