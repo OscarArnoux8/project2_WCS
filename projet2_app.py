@@ -6,6 +6,8 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import NearestNeighbors
 from PIL import Image
 
+backgroundColor = '#273346'
+
 st.set_page_config(
      page_title="Recommandation de films",
      page_icon="🦾",
