@@ -31,7 +31,7 @@ with col1:
 with col2:
     st.write('')
 with col3:
-    st.image('jao_data.png')
+    st.image('jao_data.png',width=90)
 
 col1, col2, col3 = st.columns([1,1,1]) # Center our image
 with col1:
