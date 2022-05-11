@@ -134,10 +134,9 @@ with row_1_2, _lock:
   st.pyplot(fig2)
   st.write('On remarque une nette augmentation au fil du temps. La décennie 2020 devrait prendre le pas sur les autres dans le futur.')
   
-row2_space1, row_2_1, row2_space2, row_2_2,row2_space3, row_2_3 = st.columns((.1, 1, .1, 1, .1, 1))
+row2_space1, row_2_1, row2_space2, row_2_2 = st.columns((.1, 1, .1, 1))
 
 if False:
-    with row_2_1, _lock:
       st.subheader('Evolution de la durée des films au fil des années')
       plt.rcParams.update(rc)
       fig3,ax3 = plt.subplots() # Third graph, variation of the length of movies overtime (decades as x)
@@ -147,7 +146,7 @@ if False:
       st.pyplot(fig3)
 
 
-with row_2_2, _lock:
+with row_2_1, _lock:
   st.subheader('Notes en fonction de la durée des films')
   plt.rcParams.update(rc)
   fig4,ax4 = plt.subplots() # Second graph, averageRating by length of movies
@@ -156,7 +155,7 @@ with row_2_2, _lock:
   plt.ylabel('Note moyenne')
   st.pyplot(fig4)
 
-with row_2_3, _lock:
+with row_2_2, _lock:
   st.subheader('Evolution de la Moyenne des notes dans le temps')
   plt.rcParams.update(rc)
   fig5,ax5 = plt.subplots() # Fourth graph, average rating overtime
