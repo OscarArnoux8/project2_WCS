@@ -136,16 +136,16 @@ with row_1_2, _lock:
   
 row2_space1, row_2_1, row2_space2, row_2_2,row2_space3, row_2_3 = st.columns((.1, 1, .1, 1, .1, 1))
 
-"""
-with row_2_1, _lock:
-  st.subheader('Evolution de la durée des films au fil des années')
-  plt.rcParams.update(rc)
-  fig3,ax3 = plt.subplots() # Third graph, variation of the length of movies overtime (decades as x)
-  ax3 = sns.lineplot(data=imdb,x='startYear',y='runtimeMinutes',color="#f0fff0")
-  plt.xlabel('Date')
-  plt.ylabel('Durée (minutes)')
-  st.pyplot(fig3)
-"""
+if False:
+    with row_2_1, _lock:
+      st.subheader('Evolution de la durée des films au fil des années')
+      plt.rcParams.update(rc)
+      fig3,ax3 = plt.subplots() # Third graph, variation of the length of movies overtime (decades as x)
+      ax3 = sns.lineplot(data=imdb,x='startYear',y='runtimeMinutes',color="#f0fff0")
+      plt.xlabel('Date')
+      plt.ylabel('Durée (minutes)')
+      st.pyplot(fig3)
+
 
 with row_2_2, _lock:
   st.subheader('Notes en fonction de la durée des films')
