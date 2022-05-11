@@ -18,8 +18,7 @@ _lock = RendererAgg.lock
 
 st.set_page_config(layout="wide")
 
-st.button('')
-st.write(f'''
+button = st.write(f'''
     <a target="_self" href="https://share.streamlit.io/pilouliz/movie_reco/main/app.py" style="text-decoration: none; color:white">
         <button kind="primary" class="css-1q8dd3e edgvbvh9 button" style=text-align:center>
             Nos recommandations
@@ -28,6 +27,7 @@ st.write(f'''
     ''',
     unsafe_allow_html=True
         )
+st.button(button)
 
 col1, col2, col3 = st.columns([1,1,1]) # Center our image
 with col1:
