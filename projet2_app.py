@@ -6,9 +6,6 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import NearestNeighbors
 from PIL import Image
 
-[theme]
-base="dark"
-
 st.set_page_config(
      page_title="Recommandation de films",
      page_icon="🦾",
