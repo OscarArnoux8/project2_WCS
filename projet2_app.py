@@ -10,8 +10,7 @@ st.set_page_config(
      page_title="Recommandation de films",
      page_icon="🦾",
      layout="wide",
-     initial_sidebar_state="expanded",
-     backgroundColor = '#A9A9A9'
+     initial_sidebar_state="expanded"
 )
 
 
