@@ -39,7 +39,7 @@ with col3:
 st.markdown("<h1 style='text-align: center;'>JAO Data : Analyse et Conseil</h1>", unsafe_allow_html=True)
 st.subheader('Projet : conseiller et proposer des recommandations de films à un cinéma situé dans le département de la Creuse.')
 
-st.subheader('Les outils utilisés')
+st.subheader('Les outils utilisés :')
 
 col1, col2, col3, col4 = st.columns([1 for i in range(4)]) # Adding columns for logos
 with col1:  # Adding logos one by one
@@ -154,6 +154,7 @@ with row_2_1, _lock:
   plt.xlabel('Durée (minutes)')
   plt.ylabel('Note moyenne')
   st.pyplot(fig4)
+  st.write('Les notes sur IMDb ont tendance à augmenter quand le film est plus long.')
 
 with row_2_2, _lock:
   st.subheader('Evolution de la Moyenne des notes dans le temps')
@@ -163,6 +164,8 @@ with row_2_2, _lock:
   plt.xlabel('Date')
   plt.ylabel('Note moyenne')
   st.pyplot(fig5)
+  st.write('''Les films d\'avant 1965 sont un peu mieux notés que les films plus récents. Il est bon de rappeler que les graphiques 
+           s\'appliquent à notre sélection.'''
 
 row3_space1, row_3_1, row3_space2, row_3_2 = st.columns((.1, 1, .1, 1))
 
@@ -176,7 +179,7 @@ with row_3_1, _lock:
 
 with row_3_2, _lock:
   st.subheader('Les dix films avec la meilleure note moyenne')
-  mieux_notes = imdb.averageRating.sort_values(ascending=False).head(10) # Our top 10 movies by average rating, as a table
+  mieux_notes = imdb[imdb.numVotes>10000].averageRating.sort_values(ascending=False).head(10) # Our top 10 movies by average rating, as a table
   titres_notes = np.array([imdb.title.iloc[mieux_notes.index[i]] for i in range(10)])
   notes = np.array([imdb.averageRating.iloc[mieux_notes.index[i]] for i in range(10)])
   mieux_notes = pd.DataFrame([{titres_notes[x]:str(notes[x])[0:3] for x in range(10)}]).T 
