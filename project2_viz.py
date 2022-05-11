@@ -115,13 +115,14 @@ st.write(''' En réalité, la base de donnée contient 605 284 films.
 row1_space1, row_1_1, row1_space2, row_1_2 = st.columns((.1, 1, .1, 1))
 
 with row_1_1, _lock:
-  st.subheader('Evolution du nombre de votes par film dans le temps')
+  st.subheader('Evolution de la moyenne des votes par film')
   plt.rcParams.update(rc)
   fig1,ax1 = plt.subplots() # First graph : lineplot, movies by year (maybe try with sns/px ?)
   ax1 = imdb.groupby(imdb.startYear)['numVotes'].mean().plot(color="#f0fff0")
   plt.xlabel('Date')
   plt.ylabel('Votes')
   st.pyplot(fig1)
+  st.write('Les votes ont d\'abord eu tendance à augmenter, avec un pic lors de la création d\'IMDb en 1990. Ils ont diminué dans les années 2010.')
 
 with row_1_2, _lock:
   st.subheader('Sorties par décennie')
