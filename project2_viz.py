@@ -37,7 +37,7 @@ col1, col2, col3 = st.columns([1,1,1]) # Center our image
 with col1:
   st.write("")
 with col2:
-  st.image('clapperboard-g14403e813_640.png')
+  st.image('clapperboard-g14403e813_640.png',width=150)
 with col3:
   st.write("")
 
