@@ -21,12 +21,11 @@ st.set_page_config(layout="wide")
 st.button(on_click = st.write(f'''
     <a target="_self" href="https://share.streamlit.io/pilouliz/movie_reco/main/app.py" style="text-decoration: none; color:white">
         <button kind="primary" class="css-1q8dd3e edgvbvh9 button" style=text-align:center>
+        Nos recommandations
         </button>
     </a>
     ''',
-    unsafe_allow_html=True),
-          label='Nos recommandations'
-                  )
+    unsafe_allow_html=True)
 
 col1, col2, col3 = st.columns([1,1,1]) # Center our image
 with col1:
