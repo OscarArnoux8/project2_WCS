@@ -191,7 +191,20 @@ with row_3_2, _lock:
 
 #with row_4_1, _lock:
 st.subheader('Nombre de films par genre')
-plt.rcParams.update(rc)
+plt.rcParams.update({'figure.figsize':(6,4),
+      'axes.facecolor':'#0e1117',
+      'axes.edgecolor': '#0e1117',
+      'axes.labelcolor': 'white',
+      'figure.facecolor': '#0e1117',
+      'patch.edgecolor': '#0e1117',
+      'text.color': 'white',
+      'xtick.color': 'white',
+      'ytick.color': 'white',
+      'grid.color': 'grey',
+      'font.size' : 12,
+      'axes.labelsize': 12,
+      'xtick.labelsize': 12,
+      'ytick.labelsize': 12})
 fig5,ax5 = plt.subplots() # Fifth graph, amount of movies for each genre
 ax5= people.genres.str.get_dummies(',').sum().sort_values(ascending=True).tail(10).plot(kind='barh',color="#f0fff0")
 plt.ylabel('Genre')
