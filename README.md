@@ -11,7 +11,8 @@ Technology used : Python 3.9.7
 Link Dataviz : https://share.streamlit.io/oscararnoux8/projet2_wcs/main/project2_viz.py
 
 Link Algo : https://share.streamlit.io/oscararnoux8/project2_wcs/main/projet2_app.py
-(Not open at the moment, please click on the top left button when on the Dataviz site)
+
+You can navigate from one site to another by clicking on the top-left button.
 
 Wild Code school
 
