@@ -192,7 +192,7 @@ with row_3_2, _lock:
 #with row_4_1, _lock:
 st.subheader('Nombre de films par genre')
 plt.rcParams.update(rc)
-fig5,ax5 = plt.subplots(figsize=(8,5)) # Fifth graph, amount of movies for each genre
+fig5,ax5 = plt.subplots(figsize=(8,5) # Fifth graph, amount of movies for each genre
 ax5= people.genres.str.get_dummies(',').sum().sort_values(ascending=True).tail(15).plot(kind='barh',color="#f0fff0")
 plt.ylabel('Genre')
 plt.xlabel('Nombre de films')
