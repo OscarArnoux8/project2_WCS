@@ -238,3 +238,6 @@ with row_6_2, _lock:
   st.subheader('Top 5 des acteurs, par nombre de films')
   top_actors = pd.DataFrame(people.query('category=="actor"').primaryName.value_counts().head()) # Table of the 5 most prolific actors
   st.table(top_actors.rename(columns={'primaryName':'Acteurs'}))
+st.write('''Ces listes ne contiennent que des actrices et acteurs qui ont joué dans des films ayant été diffusés en France. 
+         Il est normal d\'y trouver beaucoup de Françaises et Français, morts ou âgés. Il peut être intéressant pour vous de diffuser des films où 
+         ils ont joué, sachant que l'âge moyen des habitants de la Creuse est assez avancé.''')
