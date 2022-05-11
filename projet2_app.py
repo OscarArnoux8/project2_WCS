@@ -99,7 +99,7 @@ with st.sidebar:
 
 def get_OMDB(movieID):
   #OMDB = requests.get('http://www.omdbapi.com/?i='+ movieID + '&apikey=' + st.secrets["key"]).json()
-  requests.get('http://www.omdbapi.com/?i=tt3896198&apikey=14283348').json()
+  OMDB = requests.get('http://www.omdbapi.com/?i=tt3896198&apikey=14283348').json()
   return OMDB
 
 cols = st.columns(len(setting_name))
