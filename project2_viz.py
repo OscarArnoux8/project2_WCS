@@ -31,9 +31,9 @@ with col1:
 with col2:
     st.write("")
 with col3:
-    st.write('''Alexis Le Bihan
-                Julien Reppert
-                Oscar Arnoux''')
+    st.write('Alexis Le Bihan')
+    st.write('Julien Reppert')
+    st.write('Oscar Arnoux')
     
 
 col1, col2, col3 = st.columns([1,1,1]) # Center our image
