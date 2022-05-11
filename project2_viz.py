@@ -20,7 +20,7 @@ st.set_page_config(layout="wide")
 
 st.write(f'''
     <a target="_self" href="https://share.streamlit.io/pilouliz/movie_reco/main/app.py" style="text-decoration: none; color:white">
-        <button kind="primary" class="css-1q8dd3e edgvbvh9" style=text-align:center>
+        <button kind="primary" class="css-1q8dd3e edgvbvh9 button" style=text-align:center>
             Nos recommandations
         </button>
     </a>
