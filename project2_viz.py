@@ -185,14 +185,14 @@ with row_3_2, _lock:
   notes = np.array([imdb.averageRating.iloc[mieux_notes.index[i]] for i in range(10)])
   mieux_notes = pd.DataFrame([{titres_notes[x]:str(notes[x])[0:3] for x in range(10)}]).T 
   st.table(mieux_notes.rename(columns={0:'Note moyenne'}))
-  st.write('Dix films très bien notés, que vous pouvez diffuser sans risque. On remarque que les deux listes ont des films en commun.)
+  st.write('Dix films très bien notés, que vous pouvez diffuser sans risque. On remarque que les deux listes ont des films en commun.')
 
 #row4_space1, row_4_1, row4_space2, row_4_2 = st.columns((.1, 1, .1, 1))
 
 #with row_4_1, _lock:
 st.subheader('Nombre de films par genre')
 plt.rcParams.update(rc)
-fig5,ax5 = plt.subplots(figsize=(8,5) # Fifth graph, amount of movies for each genre
+fig5,ax5 = plt.subplots(figsize=(8,5)) # Fifth graph, amount of movies for each genre
 ax5= people.genres.str.get_dummies(',').sum().sort_values(ascending=True).tail(15).plot(kind='barh',color="#f0fff0")
 plt.ylabel('Genre')
 plt.xlabel('Nombre de films')
