@@ -201,15 +201,16 @@ plt.rcParams.update({'figure.figsize':(4,2),
       'xtick.color': 'white',
       'ytick.color': 'white',
       'grid.color': 'grey',
-      'font.size' : 9,
-      'axes.labelsize': 9,
-      'xtick.labelsize': 9,
-      'ytick.labelsize': 9})
+      'font.size' : 8,
+      'axes.labelsize': 8,
+      'xtick.labelsize': 8,
+      'ytick.labelsize': 8})
 fig5,ax5 = plt.subplots() # Fifth graph, amount of movies for each genre
 ax5= people.genres.str.get_dummies(',').sum().sort_values(ascending=True).tail(12).plot(kind='barh',color="#f0fff0")
 plt.ylabel('Genre')
 plt.xlabel('Nombre de films')
 st.pyplot(fig5)
+st.write('On note une forte présence du genre Drama. Cette surreprésentation est importante à pondérer dans le tri des films que l\'on vous propose.')
            
 
 # Add graph with multiple genres
@@ -231,9 +232,9 @@ row6_space1, row_6_1, row6_space2, row_6_2 = st.columns((.1, 1, .1, 1))
 with row_6_1, _lock:
   st.subheader('Top 5 des actrices, par nombre de films')
   top_actresses = pd.DataFrame(people.query('category=="actress"').primaryName.value_counts().head()) # Table of the 5 most prolific actresses
-  st.dataframe(top_actresses.rename(columns={'primaryName':'Actrices'}))
+  st.table(top_actresses.rename(columns={'primaryName':'Actrices'}))
   
 with row_6_2, _lock:
   st.subheader('Top 5 des acteurs, par nombre de films')
   top_actors = pd.DataFrame(people.query('category=="actor"').primaryName.value_counts().head()) # Table of the 5 most prolific actors
-  st.dataframe(top_actors.rename(columns={'primaryName':'Acteurs'}))
+  st.table(top_actors.rename(columns={'primaryName':'Acteurs'}))
