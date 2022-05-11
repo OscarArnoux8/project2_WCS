@@ -191,7 +191,7 @@ with row_3_2, _lock:
 
 #with row_4_1, _lock:
 st.subheader('Nombre de films par genre')
-plt.rcParams.update({'figure.figsize':(6,4),
+plt.rcParams.update({'figure.figsize':(4,2),
       'axes.facecolor':'#0e1117',
       'axes.edgecolor': '#0e1117',
       'axes.labelcolor': 'white',
